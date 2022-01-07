@@ -1,0 +1,7 @@
+.btn{
+  border-radius: 50px !important;
+  font-size: 1.5rem !important;
+  background-color: dodgerblue;
+  color: white;
+  border: 7px solid transparent !important;
+}
