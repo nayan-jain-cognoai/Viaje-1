@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'Viage.wsgi.application'
 #     }
 # }
 
+"""
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -93,7 +94,18 @@ DATABASES = {
             'PORT': '',
         }
     }
+"""
 
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'viage',
+            'USER': 'viage_app',
+            'PASSWORD': 'viage_app',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
