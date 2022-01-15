@@ -5,6 +5,7 @@ from django_currentuser.middleware import (
     get_current_user, get_current_authenticated_user)
 
 from django_currentuser.db.models import CurrentUserField
+from django.utils import timezone
 
 # Create your models here.
 
@@ -30,5 +31,22 @@ class Config(models.Model):
 
 	def save(self, *args, **kwargs):
 		super(Config, self).save(*args, **kwargs)
+
+
+class TripItinerary(models.Model):
+	date = models.DateField(default=timezone.now,blank=False)
+	trip_details = models.JSONField()
+
+	def save(self, *args, **kwargs):
+		super(TripItinerary, self).save(*args, **kwargs)
+
+class TripPlanning(models.Model):
+	date = models.DateField(default=timezone.now,blank=False)
+	trip_details = models.JSONField(default={})
+
+	def save(self, *args, **kwargs):
+		super(TripPlanning, self).save(*args, **kwargs)
+
+
 	
 

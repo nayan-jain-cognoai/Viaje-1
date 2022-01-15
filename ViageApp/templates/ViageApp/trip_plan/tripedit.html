@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'ViageApp/css/trip_plan.css' %}" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <style type="text/css">
+             input.text_note {
+            margin-bottom: 15px;
+            }
+            .custom_list{
+                margin-bottom: 15px;
+            }
+         </style>
+    </head>
+    <body class="">
+        <div id="main">
+            {% include 'ViageApp/trip_plan/tripplan_top.html' %}
+            <!-- Start of complete div -->
+            <div class="all_divs" style="display: none;" day=0 place=0 total=0>
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="PlanSubtitleRedesign_title">Wednesday, December 1st</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                        1/12 - 2/12
+                    </button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div" day=0 place=0 total=0>
+                    <div class="entire_place" id="entire_place" day=0 place=0 total=0>
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" day=0 place=0 total=0  class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  day=0 place=0 total=0 onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div day=0 place=0 total=0 class="note_div">
+                            <div class="note_input row third_container d-flex w-75"  day=0 place=0 total=0>
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 9%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"  id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3"  id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;" >
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5"  id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" >
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button" >
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" onclick="duplicate_custom_list(this)" >
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div>
+            </div>
+            
+
+
+            {% for key, value in trip_plan_object.items %}
+
+
+            
+
+                <div class="all_divs" style="display: block;" day=0 place=0 total=0>
+                    <div class="row second_container d-flex justify-content-between w-75">
+                        <span class="PlanSubtitleRedesign_title">Wednesday, December 1st</span>
+                        <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                            border-radius: 20px;
+                            height: 36px;
+                            min-width: 36px;
+                            min-height: 36px;border: none;">
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                            </svg>
+                            1/12 - 2/12
+                        </button>
+                    </div>
+                    <br>
+                    <div class="main_place_div" id="main_place_div" day=0 place=0 total=0>
+                    {% for key_items, value_items in value.day_trip_details.items %}
+                        
+                        <div class="entire_place" id="entire_place" day=0 place=0 total=0>
+                            <div class="row third_container d-flex justify-content-between w-75">           
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">             
+
+                            <input type="text" name=" Add a place here" value="{{value_items.place}}" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" day=0 place=0 total=0  class="duplicate_note">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                        </svg>
+                                        Note
+                                    </button>
+                                    {% if key_items == "0" %}
+                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  day=0 place=0 total=0 onclick="duplicate_place(this)">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                        </svg>
+                                        Add Places
+                                    </button>
+
+                                    
+                                    {% else %}
+                                     <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;" onclick="remove_icon_place(this)"></i>
+                                     {% endif %}
+                                </div>
+
+                                
+
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                    {% if key_items == "0" %}
+                                    <input type="text" name="Budget" value="{{value.daily_budget}}" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                                     {% endif %}
+                                </div>
+
+                               
+
+                            </div>
+                            <br>
+                            <div day=0 place=0 total=0 class="note_div">
+                                {% for items in value_items.notes %}
+
+                                 <div class="note_input row third_container d-flex w-75"  day=0 place=0 total=0>
+                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                    </div>
+                                    <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                        <input type="text" name=" Add a place here" value="{{items}}" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                               
+                            </div>
+                            <!-- Custom List -->
+                            {% for items in value_items.title_list %}
+                            
+                            
+                            <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 9%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"  id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3"  id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="{{items.title}}" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;" >
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5"  id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="{{items.value}}" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" >
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button" >
+                                {% if items.index == 0 %}
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" onclick="duplicate_custom_list(this)" >
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+
+                                {% else %}
+                                <i class="remove_icon_list fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;" onclick="remove_icon_list(this)"></i>
+
+                                {% endif %}
+                                
+                            </div>
+
+                            
+                        </div>
+                            {% endfor %}
+                        </div>
+                        <br>
+                    
+                    {% endfor %}
+                    </div>
+                    <h2 style="width: 100%; 
+                        text-align: center; 
+                        border-bottom: 1px solid #000; 
+                        line-height: 0.1em;
+                        margin: 10px 0 20px;background:#fff; 
+                        padding:0 10px; "><span style="background:#fff; 
+                        padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                    <br>
+                    <!-- End of custom list -->
+                    <!-- End of complete div -->
+                </div>
+
+            {% endfor %}
+            
+
+
+
+
+        </div>
+        <h2 style="width: 100%; 
+        text-align: center;          
+        margin: 10px 0 20px;background:#fff; 
+        padding:0 10px;"><span style="background:#fff; 
+        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 50px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>

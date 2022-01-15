@@ -5,3 +5,4 @@ from ViageApp.models import *
 
 
 admin.site.register(Config)
+admin.site.register(TripPlanning)
