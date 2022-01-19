@@ -25,6 +25,7 @@ body {
 
 <link rel="stylesheet" type="text/css" href="{% static 'ViageApp/css/home.css' %}">
 <script src="{% static 'ViageApp/js/home.js' %}"></script>
+<script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
 
 </head>
 
@@ -42,7 +43,13 @@ body {
 <div class="container-inputs">  
   <div></div>  
   <div>
-    <input type="text" id="dynamic-placeholder"/>
+    <input type="text" id="dynamic-placeholder" list="places" />
+    <datalist id="places">
+
+    {% for items in place_images %}
+      <option value="{{items.place}}">
+    {% endfor %}
+  </datalist>
   </div>  
   
   <div></div>
@@ -67,7 +74,7 @@ body {
   <div  class="container-buttons">
     <div></div>
     <div>
-    <button type="submit" tabindex="0" class="btn" color="brand">
+    <button type="submit" tabindex="0" class="btn" color="brand" onclick="submit_trip_details()">
       Start planning</button>
 </div>
       <div></div>

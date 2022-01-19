@@ -47,6 +47,13 @@ class TripPlanning(models.Model):
 	def save(self, *args, **kwargs):
 		super(TripPlanning, self).save(*args, **kwargs)
 
+class PlaceImages(models.Model):
+	place = models.TextField(default="")
+	images = models.TextField(default="")
+
+	def save(self,*args,**kwargs):
+		super(PlaceImages,self).save(*args, **kwargs)
+
 
 	
 
