@@ -32,6 +32,10 @@ class Config(models.Model):
 	def save(self, *args, **kwargs):
 		super(Config, self).save(*args, **kwargs)
 
+	class Meta:
+        verbose_name = 'Config'
+        verbose_name_plural = 'Config'
+
 
 class TripItinerary(models.Model):
 	date = models.DateField(default=timezone.now,blank=False)
@@ -40,6 +44,10 @@ class TripItinerary(models.Model):
 	def save(self, *args, **kwargs):
 		super(TripItinerary, self).save(*args, **kwargs)
 
+	class Meta:
+        verbose_name = 'TripItinerary'
+        verbose_name_plural = 'TripItinerary'
+
 class TripPlanning(models.Model):
 	date = models.DateField(default=timezone.now,blank=False)
 	trip_details = models.JSONField(default={})
@@ -47,12 +55,20 @@ class TripPlanning(models.Model):
 	def save(self, *args, **kwargs):
 		super(TripPlanning, self).save(*args, **kwargs)
 
+	class Meta:
+        verbose_name = 'TripPlanning'
+        verbose_name_plural = 'TripPlanning'
+
 class PlaceImages(models.Model):
 	place = models.TextField(default="")
 	images = models.TextField(default="")
 
 	def save(self,*args,**kwargs):
 		super(PlaceImages,self).save(*args, **kwargs)
+
+	class Meta:
+        verbose_name = 'PlaceImages'
+        verbose_name_plural = 'PlaceImages'
 
 
 	
