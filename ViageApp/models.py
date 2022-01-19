@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 from django_currentuser.middleware import (
-    get_current_user, get_current_authenticated_user)
+	get_current_user, get_current_authenticated_user)
 
 from django_currentuser.db.models import CurrentUserField
 from django.utils import timezone
@@ -33,8 +33,8 @@ class Config(models.Model):
 		super(Config, self).save(*args, **kwargs)
 
 	class Meta:
-        verbose_name = 'Config'
-        verbose_name_plural = 'Config'
+		verbose_name = 'Config'
+		verbose_name_plural = 'Config'
 
 
 class TripItinerary(models.Model):
@@ -45,8 +45,8 @@ class TripItinerary(models.Model):
 		super(TripItinerary, self).save(*args, **kwargs)
 
 	class Meta:
-        verbose_name = 'TripItinerary'
-        verbose_name_plural = 'TripItinerary'
+		verbose_name = 'TripItinerary'
+		verbose_name_plural = 'TripItinerary'
 
 class TripPlanning(models.Model):
 	date = models.DateField(default=timezone.now,blank=False)
@@ -56,8 +56,8 @@ class TripPlanning(models.Model):
 		super(TripPlanning, self).save(*args, **kwargs)
 
 	class Meta:
-        verbose_name = 'TripPlanning'
-        verbose_name_plural = 'TripPlanning'
+		verbose_name = 'TripPlanning'
+		verbose_name_plural = 'TripPlanning'
 
 class PlaceImages(models.Model):
 	place = models.TextField(default="")
@@ -67,8 +67,8 @@ class PlaceImages(models.Model):
 		super(PlaceImages,self).save(*args, **kwargs)
 
 	class Meta:
-        verbose_name = 'PlaceImages'
-        verbose_name_plural = 'PlaceImages'
+		verbose_name = 'PlaceImages'
+		verbose_name_plural = 'PlaceImages'
 
 
 	
