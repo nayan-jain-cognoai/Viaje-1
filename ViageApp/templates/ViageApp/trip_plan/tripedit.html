@@ -17,14 +17,14 @@
         <div id="main">
             {% include 'ViageApp/trip_plan/tripplan_top.html' %}
             <!-- Start of complete div -->
-            <div class="all_divs" style="display: none;" day=0 place=0 total=0>
+            <div class="all_divs" style="display: none;">
                 <div class="row second_container d-flex justify-content-between w-75">
-                    <span class="PlanSubtitleRedesign_title">Wednesday, December 1st</span>
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Wednesday, December 1st</span>
                     <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
                         border-radius: 20px;
                         height: 36px;
                         min-width: 36px;
-                        min-height: 36px;border: none;">
+                        min-height: 36px;border: none;" class="date_in_calendar">
                         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
                         </svg>
@@ -32,8 +32,8 @@
                     </button>
                 </div>
                 <br>
-                <div class="main_place_div" id="main_place_div" day=0 place=0 total=0>
-                    <div class="entire_place" id="entire_place" day=0 place=0 total=0>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
 
                         <div class="row third_container d-flex justify-content-between w-75">
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
@@ -44,13 +44,13 @@
                                <input type="text" name=" Add a place here" value="" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
                             </div>
                             <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
-                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" day=0 place=0 total=0  class="duplicate_note">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)"  class="duplicate_note">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                         <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
                                     </svg>
                                     Note
                                 </button>
-                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  day=0 place=0 total=0 onclick="duplicate_place(this)">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  onclick="duplicate_place(this)">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                         <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
                                     </svg>
@@ -63,8 +63,8 @@
                             </div>
                         </div>
                         <br>
-                        <div day=0 place=0 total=0 class="note_div">
-                            <div class="note_input row third_container d-flex w-75"  day=0 place=0 total=0>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75" >
                                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
                                 
                                 </div>
@@ -117,8 +117,8 @@
                 <!-- End of custom list -->
                 <!-- End of complete div -->
             </div>
-            </div>
-            
+<!--             </div>
+ -->            
 
 
             {% for key, value in trip_plan_object.items %}
@@ -126,25 +126,25 @@
 
             
 
-                <div class="all_divs" style="display: block;" day=0 place=0 total=0>
+                <div class="all_divs" style="display: block;">
                     <div class="row second_container d-flex justify-content-between w-75">
-                        <span class="PlanSubtitleRedesign_title">Wednesday, December 1st</span>
+                        <span class="date_of_trip PlanSubtitleRedesign_title">{{value.date_to_show}}</span>
                         <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
                             border-radius: 20px;
                             height: 36px;
                             min-width: 36px;
-                            min-height: 36px;border: none;">
+                            min-height: 36px;border: none;" class="date_in_calendar">
                             <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
                             </svg>
-                            1/12 - 2/12
+                            {{value.date_to_show_in_calendar}}
                         </button>
                     </div>
                     <br>
-                    <div class="main_place_div" id="main_place_div" day=0 place=0 total=0>
+                    <div class="main_place_div" id="main_place_div">
                     {% for key_items, value_items in value.day_trip_details.items %}
                         
-                        <div class="entire_place" id="entire_place" day=0 place=0 total=0>
+                        <div class="entire_place" id="entire_place">
                             <div class="row third_container d-flex justify-content-between w-75">           
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
                             <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
@@ -154,14 +154,14 @@
                             <input type="text" name=" Add a place here" value="{{value_items.place}}" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
                                 </div>
                                 <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
-                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" day=0 place=0 total=0  class="duplicate_note">
+                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)"  class="duplicate_note">
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
                                         </svg>
                                         Note
                                     </button>
                                     {% if key_items == "0" %}
-                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  day=0 place=0 total=0 onclick="duplicate_place(this)">
+                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  onclick="duplicate_place(this)">
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
                                         </svg>
@@ -186,10 +186,10 @@
 
                             </div>
                             <br>
-                            <div day=0 place=0 total=0 class="note_div">
+                            <div class="note_div">
                                 {% for items in value_items.notes %}
 
-                                 <div class="note_input row third_container d-flex w-75"  day=0 place=0 total=0>
+                                 <div class="note_input row third_container d-flex w-75" >
                                     <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
                                 
                                     </div>
@@ -271,7 +271,33 @@
     <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script type="text/javascript">
+
+        
+        window.onload = function() {
+            document.getElementById("start_date-end_date").innerHTML = '' + new Date("{{start_date}}").toLocaleDateString("en-US") + ' - ' + new Date("{{end_date}}").toLocaleDateString("en-US")
+        }
+        
+        const getDatesBetweenDates = (startDate, endDate) => {
+          let dates = []
+          //to avoid modifying the original date
+          const theDate = new Date(startDate)
+          while (theDate <= endDate) {
+            dates = [...dates, new Date(theDate)]
+            theDate.setDate(theDate.getDate() + 1)
+          }
+          console.log(dates)
+          return dates
+        }
+
+        var dates_between = getDatesBetweenDates(new Date("{{start_date}}"),new Date("{{end_date}}"));
+        window.dates_between = dates_between;
+
+        
+    </script>
+
+    <script type="text/javascript">
         window.start_date = "{{start_date}}";
         window.end_date = "{{end_date}}";
+        window.day = {{total_days}}
     </script>
     

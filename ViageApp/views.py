@@ -115,13 +115,16 @@ def EditTrip(request):
 		image_corresponding_to_place = PlaceImages.objects.filter(place=place_to_visit)[0].images
 
 		trip_plan_object = TripPlanning.objects.get(pk=pk).trip_details
+		total_days = len(trip_plan_object)
+		print(total_days)
 		
 		return render(request,'ViageApp/trip_plan/tripedit.html',{
 			"trip_plan_object":trip_plan_object,
 			"place_to_visit":place_to_visit,
 			"image_corresponding_to_place":image_corresponding_to_place,
 			"start_date":start_date,
-			"end_date":end_date
+			"end_date":end_date,
+			"total_days":total_days
 			})
 	except Exception as e:
 		raise_exception("Error in EditTrip")

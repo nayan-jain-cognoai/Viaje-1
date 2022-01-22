@@ -3,6 +3,12 @@ function save_itinerary_button(){
     let day_trip = {}
     for(let i = 1; i < all_divs.length; i++){
         let daily_budget = all_divs[i].querySelectorAll(".daily_budget")[0].value
+        let date = new Date(all_divs[i].querySelectorAll(".date_of_trip")[0].innerHTML)
+        var date_options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var date_to_show = date.toLocaleDateString("en-US", date_options);
+        var date_to_show_in_calendar = date.toLocaleDateString("en-US");
+        console.log(date)
+
         let all_places_inside_all_div = all_divs[i].getElementsByClassName("entire_place");
         let json_trip = {}
         for(let j = 0; j < all_places_inside_all_div.length; j++){
@@ -31,7 +37,8 @@ function save_itinerary_button(){
             json_trip[j] = place_dict
         }
         
-        day_trip[i] = {"day_trip_details":json_trip, "daily_budget":daily_budget}
+        day_trip[i] = {"day_trip_details":json_trip, "daily_budget":daily_budget, "date":date, "date_to_show":date_to_show, "date_to_show_in_calendar":date_to_show_in_calendar}
+        console.log(day_trip)
     }
     
     const csrftoken = Cookies.get('csrftoken');
