@@ -1,3 +1,4 @@
 ViageApp/migrations/00*
 Viage/migrations/00*
-log/*
+Viage/log/*
+Viage/__pycache__/*
