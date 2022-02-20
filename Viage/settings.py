@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ViageApp.apps.ViageappConfig',
+    'django_drf_filepond',
 
 ]
 
@@ -87,28 +89,20 @@ WSGI_APPLICATION = 'Viage.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'viage_model',
-            'USER': 'viage_app',
-            'PASSWORD': 'viage_app',
+            'NAME': 'viage_model_uat',
+            'USER': 'viage_model_uat',
+            'PASSWORD': 'viage_model_uat',
             'HOST': 'localhost',
             'PORT': '',
         }
     }
-    
-"""
 
-#For local
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'viage',
-            'USER': 'viage_app',
-            'PASSWORD': 'viage_app',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
-"""
+
+
+AUTH_USER_MODEL = "ViageApp.User"
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -179,6 +173,37 @@ LOGGING = {
         }
     },
 }
+
+DJANGO_DRF_FILEPOND_UPLOAD_TMP = os.path.join(BASE_DIR, 'filepond-temp-uploads')
+DJANGO_DRF_FILEPOND_FILE_STORE_PATH = os.path.join(BASE_DIR, 'stored_uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files/')
+
+FLIGHTS_ROOT = os.path.join(BASE_DIR, 'files/flights')
+LODGING_ROOT = os.path.join(BASE_DIR, 'files/lodging')
+
+CARS_ROOT = os.path.join(BASE_DIR, 'files/cars')
+BUS_ROOT = os.path.join(BASE_DIR, 'files/bus')
+TRAIN_ROOT = os.path.join(BASE_DIR, 'files/train')
+
+
+
+if not os.path.exists("files/flights/"):
+    os.makedirs("files/flights")
+
+if not os.path.exists("files/cars/"):
+    os.makedirs("files/cars")
+
+if not os.path.exists("files/lodging/"):
+    os.makedirs("files/lodging")
+
+if not os.path.exists("files/bus/"):
+    os.makedirs("files/bus")
+
+if not os.path.exists("files/train/"):
+    os.makedirs("files/train")
+
+
+MEDIA_URL = '/files/'
 
 
 

@@ -2,16 +2,73 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="{% static 'ViageApp/css/trip_plan.css' %}" rel="stylesheet">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <style type="text/css">
-             input.text_note {
+         <link href="{% static 'ViageApp/css/trip_plan.css' %}" rel="stylesheet">
+        <link href="{% static 'ViageApp/css/bootstrap.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+
+<style type="text/css">
+    input.text_note {
+            margin-bottom: 15px;
+        }
+        .custom_list{
+            margin-bottom: 15px;
+        }
+        .filepond--drop-label {
+          color: #4c4e53;
+        }
+
+        .filepond--label-action {
+          text-decoration-color: #babdc0;
+        }
+
+        .filepond--panel-root {
+          background-color: #edf0f4;
+        }
+
+        .filepond--item-panel {
+          background-color: #595e68;
+        }
+
+        .filepond--drip-blob {
+          background-color: #7f8a9a;
+        }
+
+  input.text_note {
             margin-bottom: 15px;
             }
             .custom_list{
                 margin-bottom: 15px;
             }
-         </style>
+</style>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+
+   
+
+   <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond/dist/filepond.min.css">
+
+<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-get-file@1.0.7/dist/filepond-plugin-get-file.min.css">
+
     </head>
     <body class="">
         <div id="main">
@@ -264,17 +321,200 @@
         text-align: center;          
         margin: 10px 0 20px;background:#fff; 
         padding:0 10px;"><span style="background:#fff; 
-        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 50px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
+        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 5px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
+        <h2 style="width: 100%; 
+        text-align: center;          
+        margin: 10px 0 20px;background:#fff; 
+        padding:0 10px;"><span style="background:#fff; 
+        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 5px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
+
+
+
+<div class="modal fade" id="filepond_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-left: 0px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;" >
+        <input type="file"  id = "file_pond_input"
+        class="filepond"
+        name="filepond"
+        accept="image/png, image/jpeg, image/gif"/>
+</div>
+
+</body>
+
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+
+
+   
+
+
+<script type="text/javascript">
+
+
+let chunkUploads = true
+let chunkSize = 50000
+let labelButtonDownloadItem = true
+let allowDownloadByUrl = true
+let files_flight = []
+var uploaded = {};
+var uploadIdFilenames = {}; 
+var uploaded_error = {};
+
+var type_of_attachment = ""
+
+
+let server = {
+            url: 'http://127.0.0.1:8000/fp',
+            process: '/process/',
+            patch: '/patch/',
+            revert: null,
+            fetch: null,
+            load: null
+        }
+
+    function onprocessfile(file,type_of_attachment){
+        const csrftoken = Cookies.get('csrftoken');
+
+        let url_parameters = get_url_vars();
+        let file_id = file.id
+        let filename = file.filename.replaceAll(" ","_").replaceAll("/","_").replaceAll("$","_")
+        console.log(type_of_attachment)
+        let options = {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json;charset=utf-8',
+                  'X-CSRFToken': csrftoken
+              },
+              body: JSON.stringify({
+                  "type_of_attachment":type_of_attachment,
+                  "id_of_attachment":file.serverId,
+                  "trip_pk":url_parameters["pk"],
+                  "file_id":file.id,
+                  "filename":filename
+              })
+          }
+
+        let fetchRes = fetch("/save-attachment/", options);
+        let response;
+
+        fetchRes.then(res =>
+          res.json()).then(response => {
+              response = response;
+              console.log(response)
+          })
+    }
+
+    function ondeletefile(file,type_of_attachment){
+        let url_parameters = get_url_vars();
+          let trip_pk = url_parameters["pk"]
+          let file_id = file.filename.replaceAll(" ","_")
+
+          fetch('/delete-attachment/?name_of_attachment='+file_id+"&trip_pk="+trip_pk+"&type_of_attachment="+type_of_attachment)
+              .then(response => response.json())
+              .then(data => console.log(data));
+
+
+          if(file.id in uploaded) delete uploaded[file.id];
+    }
+
+    function onerror(file,status){
+        console.log('File error: [' + error + ']   file: [' + file.id + '], status [' + status + ']');
+        if(file.id in uploaded) {
+            delete uploaded[file.id];
+        }
+        uploaded_error[file.id] = true;         
+    }
+      
+    function set_type_of_attachment(attachment){
+        type_of_attachment = attachment
+    }
+
+
+    $('#file_pond_input').filepond();
+    $('#file_pond_input').filepond('allowMultiple', true);
+    $('#file_pond_input').filepond.setOptions({
+    chunkUploads: chunkUploads,
+    chunkSize: chunkSize,
+    labelButtonDownloadItem: labelButtonDownloadItem, // by default 'Download file'
+    allowDownloadByUrl: allowDownloadByUrl, // by default downloading by URL disabled,
+    files: files_flight,
+    server: server,
+    onaddfile: function(error, file) {},
+    onprocessfile: function(error, file) {
+      onprocessfile(file,type_of_attachment)
+    },
+    onremovefile: function(error, file) {
+        ondeletefile(file,type_of_attachment)
+    },
+    onerror: function(error, file, status) {
+      onerror(file,status)
+    }
+
+    });
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+
+<script type="text/javascript">
+    const editor = new EditorJS({
+      holderId: "editorJS",
+      minHeight : 0,
+      tools: {
+        header: {
+          class: Header,
+          inlineToolbar: ["link"]
+        },
+        list: {
+          class: List,
+          inlineToolbar: true
+        },
+        paragraph: {
+        class: Paragraph,
+        inlineToolbar: true,
+      },
+        embed: {
+          class: Embed,
+          inlineToolbar: false,
+          config: {
+            services: {
+              youtube: true,
+              coub: true
+            }
+          }
+        }
+      }
+    });
+
+
+    let btnReset = document.getElementById("btnReset");
+    btnReset.addEventListener("click", () => {
+      editor.clear();
+    });
+</script>
+
+
+ <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
     <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="{% static 'ViageApp/js/home.js' %}"></script>
+
+    <script src="{% static 'ViageApp/js/bootstrap.js' %}"></script>
+
     <script type="text/javascript">
 
         
         window.onload = function() {
-            document.getElementById("start_date-end_date").innerHTML = '' + new Date("{{start_date}}").toLocaleDateString("en-US") + ' - ' + new Date("{{end_date}}").toLocaleDateString("en-US")
+            document.getElementById("start_date-end_date").innerHTML = '' + new Date("{{start_date}}").toLocaleDateString("en-US") + ' - ' + new Date("{{end_date}}").toLocaleDateString("en-US");
+            let start_date = new Date("{{start_date}}");
+            let end_date =  new Date("{{end_date}}");
+            document.getElementById("start_date-end_date").innerHTML = `<input id="trip_start" style="border:none;width:85px;cursor:pointer;"></input> -  <input id="trip_end" style="border:none;width:85px;cursor:pointer;"></input><span id="update_dates" onclick="update_dates()" style="color:blue;">Update dates</span>`
         }
         
         const getDatesBetweenDates = (startDate, endDate) => {

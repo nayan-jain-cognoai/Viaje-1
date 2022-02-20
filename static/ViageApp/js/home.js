@@ -1,6 +1,6 @@
  window.onload = function() {
       var sp = new SuperPlaceholder({
-        placeholders: ["Paris", "Shillong"],
+        placeholders: ["Manali", "Goa"],
         preText: "Where to? ",
         stay: 1000,
         speed: 100,
@@ -93,18 +93,16 @@ $(function () {
       pickTime: false, 
       format: "YYYY/MM/DD", 
       defaultDate: sd, 
-      maxDate: ed 
     });
   
     $('#endDate').datetimepicker({ 
       pickTime: false, 
       format: "YYYY/MM/DD", 
       defaultDate: ed, 
-      minDate: sd 
     });
 
     //passing 1.jquery form object, 2.start date dom Id, 3.end date dom Id
-    bindDateRangeValidation($("#form"), 'startDate', 'endDate');
+    //bindDateRangeValidation($("#form"), 'startDate', 'endDate');
 });
 
 

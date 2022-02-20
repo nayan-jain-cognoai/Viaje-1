@@ -6,6 +6,9 @@ from django_currentuser.middleware import (
 
 from django_currentuser.db.models import CurrentUserField
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
+from ViageApp.constants import *
+
 
 # Create your models here.
 
@@ -51,6 +54,11 @@ class TripItinerary(models.Model):
 class TripPlanning(models.Model):
 	date = models.DateField(default=timezone.now,blank=False)
 	trip_details = models.JSONField(default={})
+	flights = models.TextField(default="[]")
+	accomodation = models.TextField(default="[]")
+	cars = models.TextField(default="[]")
+	bus = models.TextField(default="[]")
+	train = models.TextField(default="[]")
 
 	def save(self, *args, **kwargs):
 		super(TripPlanning, self).save(*args, **kwargs)
@@ -71,5 +79,22 @@ class PlaceImages(models.Model):
 		verbose_name_plural = 'PlaceImages'
 
 
+class User(AbstractUser):
+	type_of_user = models.CharField(max_length=256,
+							null=False,
+							blank=False,
+							choices=TYPE_OF_USER,
+							help_text='Role of a user where user can be "agent" or "customer".',
+							)
+
+	def save(self, *args, **kwargs):
+		if self.pk == None:
+			self.set_password(self.password)
+		elif not self.password.startswith("pbkdf2_sha256$36000$"):
+			self.set_password(self.password)
+		super(User, self).save(*args, **kwargs)
 	
+	class Meta:
+		verbose_name = "User"
+		verbose_name_plural = "Users"
 

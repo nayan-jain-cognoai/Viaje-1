@@ -1,0 +1,1285 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'ViageApp/css/trip_plan.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        input.text_note {
+            margin-bottom: 15px;
+        }
+        .custom_list{
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+
+    </head>
+
+    <body class="">
+        <div id="main">
+            <p>href = "www.google.com"</p>
+            <div class="main_container position-relative main_container_no_margin">
+                <div class="main_header position-relative d-print-none">
+                  <div class="main_header_imgContainer w-100 position-absolute">
+                    <img alt="" class="main_header_image w-100 object-fit-cover" src="{% static 'ViageApp/assets/images/65706726.cms' %}">
+                    <div class="main_header_scrim position-absolute w-100 h-100"></div>
+                    
+                  </div>
+                  <div class="main_header_header d-flex flex-column justify-content-between w-75">
+                    <div>
+                      <div class="mt-2">
+                        <div class="HoverTextInput_editableContainer HoverTextInput_lgContainer">
+                          <input type="text" placeholder="Enter a trip name" class="smartlook-show HoverTextInput_input HoverTextInput_lgInput PlanHeaderRedesign_title" value="Trip to Parashar Lake">
+                          <div class="HoverTextInput_dummyInput HoverTextInput_lgDummy rounded position-absolute d-flex flex-row align-items-center"><span class="PlanHeaderRedesign_title invisible">Trip to Parashar Lake</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="position-relative d-flex align-items-center d-print-none ml-n3 mb-n2">
+                        <button type="button" tabindex="0" class="button button_flat-secondary button_md button_shape_pill overflow-hidden button_withLabel" color="flat-secondary">
+                          <div class="flex-grow-1 flex-shrink-1 minw-0">
+                            <div class="button_label flex-shrink-1 minw-0">
+                              <span class="button_labelText flex-shrink-1 minw-0">
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                  <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                                </svg>
+                                <span id="start_date-end_date"><input id="trip_start" style="border:none;width:85px;cursor:pointer;"> -  <input id="trip_end" style="border:none;width:85px;cursor:pointer;"><span id="update_dates" onclick="update_dates()" style="color:blue;">Update dates</span></span>
+                              </span>
+                            </div>
+                          </div>
+                        </button>
+                        <div class="HideDatePickerInputWrapper HideDatePickerInputWrapper_down">
+                          <div class="DatePickerWrapper DatePickerWrapper-336869265">
+                            <div class="DateRangePicker DateRangePicker_1">
+                              <div>
+                                <div class="DateRangePickerInput DateRangePickerInput_1">
+                                  <div class="DateInput DateInput_1">
+                                    <input class="DateInput_input DateInput_input_1" aria-label="Start Date" type="text" id="DateRangePicker_startDate-124537023" name="DateRangePicker_startDate-124537023" placeholder="Start Date" autocomplete="off" aria-describedby="DateInput_screen-reader-message-DateRangePicker_startDate-124537023" value="12/01/2021">
+                                    <p class="DateInput_screenReaderMessage DateInput_screenReaderMessage_1" id="DateInput_screen-reader-message-DateRangePicker_startDate-124537023">Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.</p>
+                                  </div>
+                                  <div class="DateRangePickerInput_arrow DateRangePickerInput_arrow_1" aria-hidden="true" role="presentation">
+                                    <svg class="DateRangePickerInput_arrow_svg DateRangePickerInput_arrow_svg_1" focusable="false" viewBox="0 0 1000 1000">
+                                      <path d="M694 242l249 250c12 11 12 21 1 32L694 773c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210-210H68c-13 0-23-10-23-23s10-23 23-23h806L662 275c-21-22 11-54 32-33z"></path>
+                                    </svg>
+                                  </div>
+                                  <div class="DateInput DateInput_1">
+                                    <input class="DateInput_input DateInput_input_1" aria-label="End Date" type="text" id="DateRangePicker_endDate-124537023" name="DateRangePicker_endDate-124537023" placeholder="End Date" autocomplete="off" aria-describedby="DateInput_screen-reader-message-DateRangePicker_endDate-124537023" value="12/11/2021">
+                                    <p class="DateInput_screenReaderMessage DateInput_screenReaderMessage_1" id="DateInput_screen-reader-message-DateRangePicker_endDate-124537023">Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-none d-print-block">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                        <span>12/1 - 12/11</span>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="d-flex flex-row align-items-center">
+                          <div class="mx-1">
+                            <div class="d-flex flex-nowrap">
+                              <button class="EditorBubble_container btn p-0 EditorCursors_bubble" type="button">
+                                <div class="position-relative">
+                                  <span class="Bubble Bubble_size_md Bubble_colorTheme_gray300 user-select-none d-flex align-items-center justify-content-center EditorBubble_bubble EditorBubble_active">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                      <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                          <button type="button" tabindex="0" class="button button_translucent-black button_md button_shape_pill overflow-hidden button_withIcon button_iconOnly d-none d-md-inline-flex" color="translucent-black">
+                            <div class="button_icon text-center flex-grow-1">
+                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-plus" class="svg-inline--fa fa-user-plus fa-w-20 fa-fw fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" color="#6c757d">
+                                <path fill="currentColor" d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-none d-print-block text-center mt-4">
+                  <h1 class="font-weight-bold mb-3 line-height-1">Trip to Paris</h1>
+                  <div class="position-relative d-flex align-items-center d-print-none">
+                    <button type="button" tabindex="-1" class="button button_flat-secondary button_md button_shape_pill overflow-hidden button_withLabel button_disabled" color="flat-secondary">
+                      <div class="flex-grow-1 flex-shrink-1 minw-0">
+                        <div class="button_label flex-shrink-1 minw-0">
+                          <span class="button_labelText flex-shrink-1 minw-0">
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                            </svg>
+                            <span>12/1 - 12/11</span>
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                    <div class="HideDatePickerInputWrapper HideDatePickerInputWrapper_down">
+                      <div class="DatePickerWrapper DatePickerWrapper-79528136">
+                        <div class="DateRangePicker DateRangePicker_1">
+                          <div>
+                            <div class="DateRangePickerInput DateRangePickerInput_1">
+                              <div class="DateInput DateInput_1">
+                                <input class="DateInput_input DateInput_input_1" aria-label="Start Date" type="text" id="DateRangePicker_startDate-470539742" name="DateRangePicker_startDate-470539742" placeholder="Start Date" autocomplete="off" aria-describedby="DateInput_screen-reader-message-DateRangePicker_startDate-470539742" value="12/01/2021">
+                                <p class="DateInput_screenReaderMessage DateInput_screenReaderMessage_1" id="DateInput_screen-reader-message-DateRangePicker_startDate-470539742">Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.</p>
+                              </div>
+                              <div class="DateRangePickerInput_arrow DateRangePickerInput_arrow_1" aria-hidden="true" role="presentation">
+                                <svg class="DateRangePickerInput_arrow_svg DateRangePickerInput_arrow_svg_1" focusable="false" viewBox="0 0 1000 1000">
+                                  <path d="M694 242l249 250c12 11 12 21 1 32L694 773c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210-210H68c-13 0-23-10-23-23s10-23 23-23h806L662 275c-21-22 11-54 32-33z"></path>
+                                </svg>
+                              </div>
+                              <div class="DateInput DateInput_1">
+                                <input class="DateInput_input DateInput_input_1" aria-label="End Date" type="text" id="DateRangePicker_endDate-470539742" name="DateRangePicker_endDate-470539742" placeholder="End Date" autocomplete="off" aria-describedby="DateInput_screen-reader-message-DateRangePicker_endDate-470539742" value="12/11/2021">
+                                <p class="DateInput_screenReaderMessage DateInput_screenReaderMessage_1" id="DateInput_screen-reader-message-DateRangePicker_endDate-470539742">Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-print-block">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                    </svg>
+                    <span>12/1 - 12/11</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row first_container d-flex justify-content-between w-75">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4" style="background: #f3f4f5;border-radius: 8px;height: 100px;">
+                  <span class="font-weight-bold font-size-16"> Reservations and attachments
+                  </span>
+
+                  <div class="d-flex align-items-center mt-2">
+                  <div role="button" tabindex="0" class="cursor-pointer IconAndTextButton__container d-flex flex-column align-items-center">
+                      <span class="IconAndTextButton__icon d-flex justify-content-center align-items-center mt-1">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plane" class="svg-inline--fa fa-plane fa-w-18 fa-fw fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" color="#212529">
+                              <path fill="currentColor" d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16.01C5.6 128-2.04 137.78.49 147.88L32 256 .49 364.12C-2.04 374.22 5.6 384 16.01 384H56c5.04 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c35.35 0 96-28.65 96-64s-60.65-64-96-64z"></path>
+                          </svg>
+                      </span>
+                      <span class="IconAndTextButton__text"><a href="www.google.com">Flights</a></span>
+                  </div>
+                  <div class="AddReservationButtons__separator mx-2"></div>
+                  <div role="button" tabindex="0" class="cursor-pointer IconAndTextButton__container d-flex flex-column align-items-center">
+                      <span class="IconAndTextButton__icon d-flex justify-content-center align-items-center mt-1">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bed" class="svg-inline--fa fa-bed fa-w-20 fa-fw fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" color="#212529">
+                              <path fill="currentColor" d="M176 256c44.11 0 80-35.89 80-80s-35.89-80-80-80-80 35.89-80 80 35.89 80 80 80zm352-128H304c-8.84 0-16 7.16-16 16v144H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v352c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h512v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V240c0-61.86-50.14-112-112-112z"></path>
+                          </svg>
+                      </span>
+                      <span class="IconAndTextButton__text">Lodging</span>
+                  </div>
+                  <div class="AddReservationButtons__separator mx-2"></div>
+                  <div role="button" tabindex="0" class="cursor-pointer IconAndTextButton__container d-flex flex-column align-items-center">
+                      <span class="IconAndTextButton__icon d-flex justify-content-center align-items-center mt-1">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="car" class="svg-inline--fa fa-car fa-w-16 fa-fw fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" color="#212529">
+                              <path fill="currentColor" d="M499.99 176h-59.87l-16.64-41.6C406.38 91.63 365.57 64 319.5 64h-127c-46.06 0-86.88 27.63-103.99 70.4L71.87 176H12.01C4.2 176-1.53 183.34.37 190.91l6 24C7.7 220.25 12.5 224 18.01 224h20.07C24.65 235.73 16 252.78 16 272v48c0 16.12 6.16 30.67 16 41.93V416c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h256v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-54.07c9.84-11.25 16-25.8 16-41.93v-48c0-19.22-8.65-36.27-22.07-48H494c5.51 0 10.31-3.75 11.64-9.09l6-24c1.89-7.57-3.84-14.91-11.65-14.91zm-352.06-17.83c7.29-18.22 24.94-30.17 44.57-30.17h127c19.63 0 37.28 11.95 44.57 30.17L384 208H128l19.93-49.83zM96 319.8c-19.2 0-32-12.76-32-31.9S76.8 256 96 256s48 28.71 48 47.85-28.8 15.95-48 15.95zm320 0c-19.2 0-48 3.19-48-15.95S396.8 256 416 256s32 12.76 32 31.9-12.8 31.9-32 31.9z"></path>
+                          </svg>
+                      </span>
+                      <span class="IconAndTextButton__text">Cars</span>
+                  </div>
+                  <div class="AddReservationButtons__separator mx-2"></div>
+                  <div role="button" tabindex="0" class="cursor-pointer IconAndTextButton__container d-flex flex-column align-items-center">
+                      <span class="IconAndTextButton__icon d-flex justify-content-center align-items-center mt-1">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bus" class="svg-inline--fa fa-bus fa-w-16 fa-fw fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" color="#212529">
+                              <path fill="currentColor" d="M488 128h-8V80c0-44.8-99.2-80-224-80S32 35.2 32 80v48h-8c-13.25 0-24 10.74-24 24v80c0 13.25 10.75 24 24 24h8v160c0 17.67 14.33 32 32 32v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h192v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h6.4c16 0 25.6-12.8 25.6-25.6V256h8c13.25 0 24-10.75 24-24v-80c0-13.26-10.75-24-24-24zM112 400c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm16-112c-17.67 0-32-14.33-32-32V128c0-17.67 14.33-32 32-32h256c17.67 0 32 14.33 32 32v128c0 17.67-14.33 32-32 32H128zm272 112c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path>
+                          </svg>
+                      </span>
+                      <span class="IconAndTextButton__text">Bus</span>
+                  </div>
+                  <div class="AddReservationButtons__separator mx-2"></div>
+                  <div role="button" tabindex="0" class="cursor-pointer IconAndTextButton__container d-flex flex-column align-items-center">
+                      <span class="IconAndTextButton__icon d-flex justify-content-center align-items-center mt-1">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="subway" class="svg-inline--fa fa-subway fa-w-14 fa-fw fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" color="#212529">
+                              <path fill="currentColor" d="M448 96v256c0 51.815-61.624 96-130.022 96l62.98 49.721C386.905 502.417 383.562 512 376 512H72c-7.578 0-10.892-9.594-4.957-14.279L130.022 448C61.82 448 0 403.954 0 352V96C0 42.981 64 0 128 0h192c65 0 128 42.981 128 96zM200 232V120c0-13.255-10.745-24-24-24H72c-13.255 0-24 10.745-24 24v112c0 13.255 10.745 24 24 24h104c13.255 0 24-10.745 24-24zm200 0V120c0-13.255-10.745-24-24-24H272c-13.255 0-24 10.745-24 24v112c0 13.255 10.745 24 24 24h104c13.255 0 24-10.745 24-24zm-48 56c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm-256 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path>
+                          </svg>
+                      </span>
+                      <span class="IconAndTextButton__text">Train</span>
+                  </div>
+              </div>
+                </div>
+                <div></div>
+                <div class="col-3 col-sm-3 col-md-3 col-lg-4 col-xl-4" contenteditable="true" style="background: #f3f4f5;border-radius: 8px;height: 100px;overflow-y: auto;" placeholder="Write or paste anything here: how to get around, tips and tricks"><span class="font-weight-bold font-size-16"> Mention things you want to carry
+                  </span></div>
+                <!-- <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="background: #f3f4f5;border-radius: 8px;height: 80px;">
+                  Things to carry:
+                </div>
+                <h1 contentEditable="true">Your Name</h1> -->
+                <div></div>
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" data-gramm="false" contenteditable="true" data-placeholder="Write or paste anything here: how to get around, tips and tricks" style="background: #f3f4f5;border-radius: 8px;height: 100px;">
+                  <span class="font-weight-bold font-size-16"> Budgeting
+                  </span>
+                  <p></p>
+                  <h3>Rs. 50000 </h3>
+                </div>
+
+              </div>
+
+
+              <div class="container_of_days" style="margin-top: 150px;">
+                <br>
+<br>
+<br>
+
+
+
+            <!-- Start of complete div -->
+            <div class="all_divs" style="display: none;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Wednesday, December 1st</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                        1/12 - 2/12
+                    </button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div>
+        <div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Monday, January 31, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          1/31/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size: 30px; color: red; padding: 3px; cursor: pointer;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div><div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size: 30px; color: red; padding: 3px; cursor: pointer;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div></div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Tuesday, February 1, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/1/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size: 30px; color: red; padding: 3px; cursor: pointer;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div><div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size: 30px; color: red; padding: 3px; cursor: pointer;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div></div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Wednesday, February 2, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/2/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Thursday, February 3, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/3/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Friday, February 4, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/4/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Saturday, February 5, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/5/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Sunday, February 6, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/6/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div><div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">Monday, February 7, 2022</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar"> <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                          2/7/2022</button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
+                    <div class="entire_place" id="entire_place">
+
+                        <div class="row third_container d-flex justify-content-between w-75">
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
+                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                        </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+
+                               <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)" class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button" onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <input type="text" name="Budget" value="Pahalgam Looks like a good place" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            <div class="note_input row third_container d-flex w-75">
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                </div>
+                                <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- Custom List -->
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="custom_list_header_input">
+                            </div>
+                            <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3" id="custom_list_header_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="Add a title (e.g., Hotels)" class="reverse-input list_key" style="height: 48px;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;font-size: 1.25rem;font-weight: 700;color: green;">
+                            </div>
+                            <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5" id="custom_list_input">
+                                <input type="text" name=" Add a place here" value="Pahalgam Looks like a good place" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;">
+
+                            </div>
+                            
+                            
+                            <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="custom_list" onclick="duplicate_custom_list(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add list
+                                </button>
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <br>
+                <h2 style="width: 100%; 
+                    text-align: center; 
+                    border-bottom: 1px solid #000; 
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;background:#fff; 
+                    padding:0 10px;"><span style="background:#fff; 
+                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div></div>
+
+        <h2 style="width: 100%; 
+        text-align: center;          
+        margin: 10px 0 20px;background:#fff; 
+        padding:0 10px;"><span style="background:#fff; 
+        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 50px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
+          
+
+
+        
+    <button onclick="savePdf0()">Success</button>
+
+    <div id="printable-cv">
+            sdadsasaddsaasd
+            <a href="www.google.com">Google</a>
+          </div>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script type="text/javascript">
+        function getPDF(){
+
+        for(var i=0;i<document.getElementsByTagName('input').length;i++){document.getElementsByTagName('input')[i].style.backgroundColor = "white"}
+        for(var i=0;i<document.getElementsByClassName('duplicate_note').length;i++){document.getElementsByClassName('duplicate_note')[i].style.display = "none"}
+        for(var i=0;i<document.getElementsByClassName('add_place_button').length;i++){document.getElementsByClassName('add_place_button')[i].style.display = "none"}
+        for(var i=0;i<document.getElementsByClassName('remove_icon_notes').length;i++){document.getElementsByClassName('remove_icon_notes')[i].style.display = "none"}
+        for(var i=0;i<document.getElementsByClassName('custom_list').length;i++){document.getElementsByClassName('custom_list')[i].style.display = "none"}
+
+        var HTML_Width = $("#main").width();
+        var HTML_Height = $("#main").height();
+        var top_left_margin = 0;
+        var PDF_Width = HTML_Width;
+        var PDF_Height = HTML_Height;
+        console.log(PDF_Height)
+        var canvas_image_width = HTML_Width;
+        var canvas_image_height = HTML_Height;
+        
+        var totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
+        
+
+        html2canvas($("#main")[0],{
+                allowTaint:false,
+                scale : 5.0,
+                enableLinks: true
+            }).then(function(canvas) {
+            canvas.getContext('2d');
+            
+            console.log(canvas.height+"  "+canvas.width);
+            
+            console.log(canvas.toDataURL)
+            var imgData = canvas.toDataURL("image/jpeg", 0.2);
+            var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+
+            pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+            
+            
+            for (var i = 1; i <= totalPDFPages; i++) { 
+                pdf.addPage(PDF_Width, PDF_Height);
+                pdf.addImage(imgData, 'JPEG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+            }
+            
+            pdf.save("HTML-Document.pdf");
+        });
+    };
+
+
+    function savePdf0 () {
+      let opt = {
+        filename: 'cv.pdf',
+        enableLinks: true,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 8,
+          useCORS: true,
+          width: 310,
+          letterRendering: true,
+        },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      }
+      html2pdf().set(opt).from(document.getElementById('printable-cv')).save()
+    }
+
+</script>
+
+    <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
+    <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+    
+
+    <script src="{% static 'ViageApp/js/home.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+    <script type="text/javascript">
+
+        
+        window.onload = function() {
+            duplicate_day(true);
+            let start_date = new Date("{{start_date}}");
+            let end_date =  new Date("{{end_date}}");
+            document.getElementById("start_date-end_date").innerHTML = `<input id="trip_start" style="border:none;width:85px;cursor:pointer;"></input> -  <input id="trip_end" style="border:none;width:85px;cursor:pointer;"></input><span id="update_dates" onclick="update_dates()" style="color:blue;">Update dates</span>`
+
+        }
+        
+        const getDatesBetweenDates = (startDate, endDate) => {
+          let dates = []
+          //to avoid modifying the original date
+          const theDate = new Date(startDate)
+          while (theDate <= endDate) {
+            dates = [...dates, new Date(theDate)]
+            theDate.setDate(theDate.getDate() + 1)
+          }
+
+          return dates
+        }
+
+        var dates_between = getDatesBetweenDates(new Date("{{start_date}}"),new Date("{{end_date}}"));
+        window.dates_between = dates_between;
+
+        
+    </script>
+
+    <script type="text/javascript">
+        window.start_date = "{{start_date}}";
+        window.end_date = "{{end_date}}";
+        window.day = 0;
+    </script>

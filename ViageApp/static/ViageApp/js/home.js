@@ -88,12 +88,12 @@
 
 $(function () {
     var sd = new Date(), ed = new Date();
-  
-    $('#startDate').datetimepicker({ 
+    try{
+      $('#startDate').datetimepicker({ 
       pickTime: false, 
       format: "YYYY/MM/DD", 
       defaultDate: sd, 
-      maxDate: ed 
+      //maxDate: ed 
     });
   
     $('#endDate').datetimepicker({ 
@@ -102,6 +102,31 @@ $(function () {
       defaultDate: ed, 
       minDate: sd 
     });
+    }catch(err){}
+    
+
+
+    try{
+
+      var trip_start_date = new Date(window.start_date)
+      var trip_end_date = new Date(window.end_date)
+      var ed = new Date()
+        $('#trip_start').datetimepicker({ 
+        pickTime: false, 
+        format: "YYYY/MM/DD", 
+        defaultDate: trip_start_date, 
+        //maxDate: ed 
+      });
+    
+      $('#trip_end').datetimepicker({ 
+        pickTime: false, 
+        format: "YYYY/MM/DD", 
+        defaultDate: trip_end_date, 
+        minDate: sd 
+      });
+    }catch(err){console.log(err)}
+
+
 
     //passing 1.jquery form object, 2.start date dom Id, 3.end date dom Id
     bindDateRangeValidation($("#form"), 'startDate', 'endDate');
@@ -165,6 +190,77 @@ $(function () {
   this.kill = function() {
     clearInterval(this.intervalId); 
   }
+}
+
+
+function sign_up_user(){
+    const csrftoken = Cookies.get('csrftoken');
+
+    let full_name =  document.getElementById("full_name").value;
+    let email_address = document.getElementById("email_address").value;
+    let password = document.getElementById("password_one").value;
+    let re_enter_password = document.getElementById("password_two").value;
+
+    console.log(password)
+    console.log(re_enter_password)
+    if(password != re_enter_password){
+        alert("Please check the password");
+    }
+
+
+
+    let options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8',
+                'X-CSRFToken': csrftoken
+            },
+            body: JSON.stringify({
+                "full_name":full_name,
+                "email_address":email_address,
+                "password":password,
+                "re_enter_password":re_enter_password
+            })
+        }
+
+    let fetchRes = fetch("/signup/", options);
+    let response;
+
+    fetchRes.then(res =>
+        res.json()).then(response => {
+            response = response;
+            console.log(response)
+            
+        })
+}
+
+
+function login(){
+  const csrftoken = Cookies.get('csrftoken');
+  let email_address = document.getElementById("login_email").value;
+  let password = document.getElementById("login_password").value;
+  let options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8',
+                'X-CSRFToken': csrftoken
+            },
+            body: JSON.stringify({
+                "email_address":email_address,
+                "password":password,
+            })
+        }
+
+  let fetchRes = fetch("/login/", options);
+  let response;
+
+  fetchRes.then(res =>
+      res.json()).then(response => {
+          response = response;
+          console.log(response)
+          
+      })
+
 }
 
 

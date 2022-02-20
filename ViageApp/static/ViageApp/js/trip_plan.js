@@ -1,12 +1,10 @@
 
 var day = window.day;
 var original = document.getElementsByClassName('all_divs')[0];
-console.log(window.dates_between)
 
-function duplicate_day() {
+function duplicate_day(called_on_load=false) {
     // duplicating and updating id of div
-    console.log(day)
-    console.log(window.dates_between.length)
+    
     if(day >= window.dates_between.length){
         alert("Please extend the dates to proceed");
         return;
@@ -16,9 +14,13 @@ function duplicate_day() {
     clone.style.display = "block";
     // appending
     original.parentNode.appendChild(clone);
-    var scrollingElement = (document.scrollingElement || document.body);
-    scrollingElement.scrollTop = scrollingElement.scrollHeight;
-    var dates_between = window.dates_between
+
+    if(called_on_load == false){
+        var scrollingElement = (document.scrollingElement || document.body);
+        scrollingElement.scrollTop = scrollingElement.scrollHeight;
+        var dates_between = window.dates_between
+    }
+    
     
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     var date_to_show = dates_between[day].toLocaleDateString("en-US", options);
@@ -85,3 +87,4 @@ function get_url_vars() {
     });
     return vars;
 }
+
