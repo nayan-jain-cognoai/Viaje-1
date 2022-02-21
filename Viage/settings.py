@@ -98,7 +98,6 @@ DATABASES = {
     }
 
 
-
 AUTH_USER_MODEL = "ViageApp.User"
 
 
