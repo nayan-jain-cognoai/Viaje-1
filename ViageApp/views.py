@@ -54,10 +54,7 @@ def index(request):
 		strategy_array = config_object.strategy_array.split("$$$")
 		strategy_content_array = config_object.strategy_content_array.split("$$$")
 		strategy_array_images = config_object.strategy_array_images.split("$$$")
-
-
 		final_strategy_content = zip(strategy_array,strategy_content_array,strategy_array_images)
-		print(final_strategy_content)
 		return render(request, 'ViageApp/home/home.html',{
 			"config_object":config_object,
 			"place_images":place_images,
