@@ -1,0 +1,616 @@
+[
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 12,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-04T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 5, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/5/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646463781944,\"blocks\":[{\"id\":\"e9oAEC7Z9k\",\"type\":\"paragraph\",\"data\":{\"text\":\"Nayan\"}},{\"id\":\"GtFiWSlhCS\",\"type\":\"paragraph\",\"data\":{\"text\":\"Jain\"}},{\"id\":\"FPMRw-CY1-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Best\"}}],\"version\":\"2.23.2\"}",
+        "start_budget": 0,
+        "end_budget": 0
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 13,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-04T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 5, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/5/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646466286839,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 0,
+        "end_budget": 0
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 14,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-04T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 5, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/5/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646466894096,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 0,
+        "end_budget": 0
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 15,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {},
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646467043707,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 0,
+        "end_budget": 0
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 16,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-04T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 5, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/5/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646467573094,\"blocks\":[{\"id\":\"NRVAuNLZZl\",\"type\":\"paragraph\",\"data\":{\"text\":\"Hi&nbsp;\"}},{\"id\":\"HCq8xDThzB\",\"type\":\"paragraph\",\"data\":{\"text\":\"Hello\"}},{\"id\":\"istNBrSRgs\",\"type\":\"paragraph\",\"data\":{\"text\":\"lol\"}}],\"version\":\"2.23.2\"}",
+        "start_budget": 0,
+        "end_budget": 0
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 17,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-04T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 5, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/5/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646467591591,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 0,
+        "end_budget": 0
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 18,
+    "fields": {
+        "date": "2022-03-05",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-04T18:30:00.000Z",
+                "daily_budget": "4567",
+                "date_to_show": "Saturday, March 5, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/5/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646481593587,\"blocks\":[{\"id\":\"NKdU7L3eJM\",\"type\":\"paragraph\",\"data\":{\"text\":\"LOOOOOL\"}}],\"version\":\"2.23.2\"}",
+        "start_budget": 500,
+        "end_budget": 50000
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 19,
+    "fields": {
+        "date": "2022-03-06",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-06T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Monday, March 7, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/7/2022"
+            }
+        },
+        "flights": "[\"\\/files\\/flights\\/Data_purging_mail_chain.pdf\",\"\\/files\\/flights\\/Screenshot_2022-02-22_at_10.57.39_AM.png\"]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1646595154589,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 5000,
+        "end_budget": 5000
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 20,
+    "fields": {
+        "date": "2022-03-07",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-06T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Monday, March 7, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/7/2022"
+            }
+        },
+        "flights": "[\"\\/files\\/flights\\/Screenshot_2022-02-28_at_9.00.21_PM.png\"]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 16,
+        "important_things_for_trip": "{\"time\":1646637490362,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 5000,
+        "end_budget": 5000
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 21,
+    "fields": {
+        "date": "2022-03-07",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-06T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Monday, March 7, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/7/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 16,
+        "important_things_for_trip": "{\"time\":1646640447950,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 5000,
+        "end_budget": 5000
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 22,
+    "fields": {
+        "date": "2022-03-12",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-11T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 12, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/12/2022"
+            },
+            "2": {
+                "date": "2022-03-12T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Sunday, March 13, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/13/2022"
+            },
+            "3": {
+                "date": "2022-03-13T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Monday, March 14, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/14/2022"
+            },
+            "4": {
+                "date": "2022-03-14T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Tuesday, March 15, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/15/2022"
+            },
+            "5": {
+                "date": "2022-03-15T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Wednesday, March 16, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/16/2022"
+            },
+            "6": {
+                "date": "2022-03-16T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Thursday, March 17, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/17/2022"
+            },
+            "7": {
+                "date": "2022-03-17T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Friday, March 18, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/18/2022"
+            },
+            "8": {
+                "date": "2022-03-18T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 19, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/19/2022"
+            },
+            "9": {
+                "date": "2022-03-19T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Sunday, March 20, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/20/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1647071151221,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 5000,
+        "end_budget": 5000
+    }
+},
+{
+    "model": "ViageApp.tripplanning",
+    "pk": 23,
+    "fields": {
+        "date": "2022-03-12",
+        "trip_details": {
+            "1": {
+                "date": "2022-03-11T18:30:00.000Z",
+                "daily_budget": "",
+                "date_to_show": "Saturday, March 12, 2022",
+                "day_trip_details": {
+                    "0": {
+                        "notes": [
+                            ""
+                        ],
+                        "place": "",
+                        "title_list": [
+                            {
+                                "index": 0,
+                                "title": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "date_to_show_in_calendar": "3/12/2022"
+            }
+        },
+        "flights": "[]",
+        "accomodation": "[]",
+        "cars": "[]",
+        "bus": "[]",
+        "train": "[]",
+        "user": 17,
+        "important_things_for_trip": "{\"time\":1647083858499,\"blocks\":[],\"version\":\"2.23.2\"}",
+        "start_budget": 5000,
+        "end_budget": 5000
+    }
+}
+]
