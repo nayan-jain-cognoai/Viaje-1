@@ -226,9 +226,9 @@ def SaveAttachments(request):
 		os.rename(full_file_path,settings.MEDIA_ROOT + type_of_attachment + "/" + filename)
 
 		#only for local
-		sudoPassword = 'a1s2t3z4'
+		#sudoPassword = 'a1s2t3z4'
 		command = "rm -rf "+settings.DJANGO_DRF_FILEPOND_UPLOAD_TMP + "/" + id_of_attachment
-		remove_file = os.system('echo %s|sudo -S %s' % (sudoPassword, command))
+		remove_file = os.system('sudo -S %s' % (command))
 
 		file_path = settings.MEDIA_ROOT + type_of_attachment + "/" + filename
 
@@ -285,9 +285,9 @@ def DeleteAttachments(request):
 		full_file_path = settings.MEDIA_ROOT + type_of_attachment + "/" + file_id
 
 		# Only for local
-		sudoPassword = 'a1s2t3z4'
+		#sudoPassword = 'a1s2t3z4'
 		command = "rm -rf "+full_file_path
-		remove_file = os.system('echo %s|sudo -S %s' % (sudoPassword, command))
+		remove_file = os.system('sudo -S %s' % (command))
 
 		trip_object = TripPlanning.objects.get(pk=trip_pk)
 
