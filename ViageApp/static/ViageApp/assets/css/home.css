@@ -22,7 +22,7 @@ html {
     font-weight: normal;
     font-size: 30px;
     padding-left: 20px;
-    color: #FFFFFF;
+    color: black !important;
 }
 
 .start_background, .start_background_trip{
@@ -40,7 +40,7 @@ html {
     font-weight: normal;
     font-size: 45px;
     line-height: 60px;
-    color: #FFFFFF;
+    color: black !important;
 }
 
 .company_description
@@ -51,7 +51,7 @@ html {
     font-size: 18px;
     line-height: 33px;
 
-    color: #FFFFFF;
+    color: black !important;
 }
 
 
@@ -637,7 +637,7 @@ color: #656060;
 }
 
 
-#dynamic-placeholder{
+#dynamic-placeholder {
     height: 80px;
     width: 100%;
     text-align: center;
@@ -645,6 +645,16 @@ color: #656060;
     font-style: normal;
     font-size: 18px;
 }
+
+#dynamic-placeholder-mobile{
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-size: 18px;
+}
+
 
 #startDate{
     height: 80px;
@@ -681,7 +691,16 @@ color: #656060;
 
 
 @media only screen and (max-width: 1025px) {
-    #dynamic-placeholder{
+    #dynamic-placeholder {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-size: 18px;
+    }
+
+    #dynamic-placeholder-mobile {
     height: 50px;
     width: 100%;
     text-align: center;
@@ -707,6 +726,11 @@ color: #656060;
         font-style: normal;
         font-size: 18px;
     }
+}
+
+
+.nav-link{
+    color: black !important;
 }
 /* @media (min-width:641px)  { portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones } */
 /* @media (min-width:961px)  { tablet, landscape iPad, lo-res laptops ands desktops } */

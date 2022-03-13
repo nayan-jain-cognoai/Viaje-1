@@ -177,8 +177,8 @@
 
       <div class="container-fluid md-8 start_background">
         <div class="top_content px-5 py-5 ">
-          <p class = " company_tagline pb-2">Lorem Ipsum sit dolor amet.</p>
-          <p class = "company_description py-1 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p class = " company_tagline pb-2">{{config_object.header_array}}</p>
+          <p class = "company_description py-1 pb-2">{{config_object.header_content}}</p>
           
           <div class="content_points_1 my-2 ">
             <span class="circle me-3">
@@ -189,7 +189,8 @@
               </svg>
             </span>
             <p class = "selling_point1 mx-auto pe-3 mb-4">
-              Network of 200+ Agents
+              {{config_object.number_of_agents_message}}
+              
             </p>
           </div>
           <div class="content_points_2 my-2">
@@ -199,7 +200,9 @@
               </svg>
             </span>
             <p class = "selling_point1 mx-auto pe-3 mb-4">
-              40+ Locations near you
+              {{config_object.number_of_locations_message}}
+              
+              
             </p>
           </div>
         </div>
@@ -251,10 +254,10 @@
                   </button>
                 </div>
                 <div class="modal-body mx-3 mb-0">
-                    <form>
+                    
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Enter your Destination</label>
-                          <input type="text" id="dynamic-placeholder" class="form-control rounded-3" list="places" placeholder="Where to?" />
+                          <input type="text" id="dynamic-placeholder-mobile" class="form-control rounded-3" list="places" placeholder="Where to?" />
                         <datalist id="places">
                             {% for items in place_images %}
                           <option value="{{items.place}}">
@@ -274,8 +277,8 @@
 
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style = "width: 100%;" onclick="submit_trip_details()">Search Itinerary</button>
-                      </form>
+                        <button type="submit" class="btn btn-primary" style = "width: 100%;" onclick="submit_trip_details(true)">Search Itinerary</button>
+                      
                 </div>
                 <div class="modal-footer border-0 pt-0">
                   
@@ -347,7 +350,29 @@
       <section>
         <div class="container md-8 third_con overflow-auto" id="about">
         <div class="row flex-row flex-nowrap row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 mx-auto " style="text-align: center;">
-          <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
+
+          {% for item1,item2,item3 in final_strategy_content %}
+            
+            <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
+            <div class="container mx-auto">
+              <img src="/static/ViageApp/assets/images/complete_static/{{item3}}" class="mx-4 mx-auto my-4 img-fluid img_vector" alt="">
+            </div>
+              <p class = "popular_locations_2 mx-0 ">{{item1}}</p>
+                <hr class = "line_divide line_divide_2 mx-auto" size="10px">
+                <p class="container_information py-5 text-muted mx-auto">
+                  {{item2}} 
+                </p>
+            </div>
+
+            {% endfor %}
+        
+
+
+
+
+
+
+          <!-- <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
             <div class="container mx-auto">
               <img src="{% static 'ViageApp/assets/images/complete_static/travelvector.jpg' %}" class="mx-4 mx-auto my-4 img-fluid img_vector" alt="">
             </div>
@@ -358,7 +383,7 @@
                 </p>
             </div>
         
-          <div class="col-sm-10 col-md-6 col-lg-3 mx-auto">
+          <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
             <div class="container mx-auto">
               <img src="{% static 'ViageApp/assets/images/complete_static/trip.jpg' %}" class="mx-4 w-100 mx-auto my-4 img-fluid img_vector" alt="">
             </div>
@@ -379,7 +404,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
               </p>
               
-            </div>
+            </div> -->
           </div>
         </div>
         </div>
@@ -721,7 +746,7 @@
       </section>
 
       <!-- Newsletter -->
-      <section>
+      <section style="display: none;">
           <div class="container-fluid md-8 mb-5 seventh_con" >
             <div class="container px-5 pb-3 mx-auto pb-0 newsletter_content" >
               <p class = "popular_locations_4 pt-4">Sign up for our daily newsletter</p>

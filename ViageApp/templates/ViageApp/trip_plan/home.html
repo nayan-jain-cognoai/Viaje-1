@@ -107,9 +107,12 @@ body {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
+    <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
+
 </head>
 <body>  
-    <section class = "start_background_trip" style="background-image: url({{image_corresponding_to_place}}) !important;">
+    <section class = "start_background_trip" style="background-image: url('/static/ViageApp/assets/images/places/{{image_corresponding_to_place}}')  !important;">
       <header>
         <nav class="navbar navbar-expand-sm navbar-dark " aria-label="Third navbar example">
            <div class="container-fluid py-2 px-4">
@@ -164,7 +167,7 @@ body {
         <div class="top_content px-5 py-5 ">
           <p class = " company_tagline pt-5 pb-3">Paris.<br> The City of Lights.</p>
           <p class = "company_description pt-0 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          <button type="button" class="btn-lg pt-2 mb-5  itinerary_primary text-light">Create Itinerary</button>
+          <button type="button" onclick="create_itinerary()" class="btn-lg pt-2 mb-5  itinerary_primary text-light">Create Itinerary</button>
           
           
         

@@ -103,32 +103,6 @@ $(function () {
       minDate: sd 
     });
     }catch(err){}
-    
-
-
-    try{
-
-      var trip_start_date = new Date(window.start_date)
-      var trip_end_date = new Date(window.end_date)
-      var ed = new Date()
-        $('#trip_start').datetimepicker({ 
-        pickTime: false, 
-        format: "YYYY/MM/DD", 
-        defaultDate: trip_start_date, 
-        //maxDate: ed 
-      });
-    
-      $('#trip_end').datetimepicker({ 
-        pickTime: false, 
-        format: "YYYY/MM/DD", 
-        defaultDate: trip_end_date, 
-        minDate: sd 
-      });
-    }catch(err){console.log(err)}
-
-
-
-    //passing 1.jquery form object, 2.start date dom Id, 3.end date dom Id
     bindDateRangeValidation($("#form"), 'startDate', 'endDate');
 });
 
@@ -260,7 +234,17 @@ function login(){
           console.log(response)
           
       })
-
 }
 
 
+const getDatesBetweenDates = (startDate, endDate) => {
+          let dates = []
+          //to avoid modifying the original date
+          const theDate = new Date(startDate)
+          while (theDate <= endDate) {
+            dates = [...dates, new Date(theDate)]
+            theDate.setDate(theDate.getDate() + 1)
+          }
+
+          return dates
+        }

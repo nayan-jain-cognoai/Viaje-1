@@ -2,75 +2,57 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link href="{% static 'ViageApp/css/trip_plan.css' %}" rel="stylesheet">
+        <link href="{% static 'ViageApp/css/trip_plan.css' %}" rel="stylesheet">
         <link href="{% static 'ViageApp/css/bootstrap.css' %}" rel="stylesheet">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         
-
-<style type="text/css">
-    input.text_note {
-            margin-bottom: 15px;
-        }
-        .custom_list{
-            margin-bottom: 15px;
-        }
-        .filepond--drop-label {
-          color: #4c4e53;
-        }
-
-        .filepond--label-action {
-          text-decoration-color: #babdc0;
-        }
-
-        .filepond--panel-root {
-          background-color: #edf0f4;
-        }
-
-        .filepond--item-panel {
-          background-color: #595e68;
-        }
-
-        .filepond--drip-blob {
-          background-color: #7f8a9a;
-        }
-
-  input.text_note {
+        <style type="text/css">
+            input.text_note {
             margin-bottom: 15px;
             }
             .custom_list{
-                margin-bottom: 15px;
+            margin-bottom: 15px;
             }
-</style>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
-
-   
-
-   <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond/dist/filepond.min.css">
-
-<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
-<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>
-<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
-<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
-<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-
-    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-get-file@1.0.7/dist/filepond-plugin-get-file.min.css">
-
+            .filepond--drop-label {
+            color: #4c4e53;
+            }
+            .filepond--label-action {
+            text-decoration-color: #babdc0;
+            }
+            .filepond--panel-root {
+            background-color: #edf0f4;
+            }
+            .filepond--item-panel {
+            background-color: #595e68;
+            }
+            .filepond--drip-blob {
+            background-color: #7f8a9a;
+            }
+            input.text_note {
+            margin-bottom: 15px;
+            }
+            .custom_list{
+            margin-bottom: 15px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond/dist/filepond.min.css">
+        <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+        <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+        <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-get-file@1.0.7/dist/filepond-plugin-get-file.min.css">
     </head>
-    <body class="">
+    <body id="body-content">
         <div id="main">
             {% include 'ViageApp/trip_plan/tripplan_top.html' %}
             <!-- Start of complete div -->
@@ -91,17 +73,15 @@
                 <br>
                 <div class="main_place_div" id="main_place_div">
                     <div class="entire_place" id="entire_place">
-
                         <div class="row third_container d-flex justify-content-between w-75">
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
-                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
-                        </div>
+                                <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                            </div>
                             <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
-
-                               <input type="text" name=" Add a place here" value="" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                                <input type="text" name=" Add a place here" value="" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
                             </div>
                             <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
-                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)"  class="duplicate_note">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;display: none;" id="duplicater_add_note_button" onclick="duplicate_note(this)"  class="duplicate_note">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                         <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
                                     </svg>
@@ -116,22 +96,19 @@
                                 <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_place(this)"></i>
                             </div>
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                <input type="text" name="Budget" value="" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                                <input type="number" name="Budget" value="" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget ">
                             </div>
                         </div>
                         <br>
                         <div class="note_div">
                             <div class="note_input row third_container d-flex w-75" >
                                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                
                                 </div>
-                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
-                                    <input type="text" name=" Add a place here" value="" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
+                                <div class="note_input_editor col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">
+                                    <textarea name=" Add a place here" value="" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note"></textarea>
                                 </div>
                                 <i class="remove_icon_notes fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;display: none;" onclick="remove_icon_notes(this)"></i>
-                                
                             </div>
-                            
                         </div>
                         <!-- Custom List -->
                         <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
@@ -142,10 +119,7 @@
                             </div>
                             <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5"  id="custom_list_input">
                                 <input type="text" name=" Add a place here" value="" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" >
-
                             </div>
-                            
-                            
                             <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button" >
                                 <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" onclick="duplicate_custom_list(this)" >
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -153,116 +127,83 @@
                                     </svg>
                                     Add list
                                 </button>
-                                
                             </div>
-
-                            
                         </div>
-                        
                     </div>
-                    
                 </div>
                 <br>
-                <h2 style="width: 100%; 
-                    text-align: center; 
-                    border-bottom: 1px solid #000; 
-                    line-height: 0.1em;
-                    margin: 10px 0 20px;background:#fff; 
-                    padding:0 10px;"><span style="background:#fff; 
-                    padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
+                <h2 class="add_day_h2"><button class="outline_btn info" onclick="duplicate_day()">Add Day</button></h2>
                 <br>
                 <!-- End of custom list -->
                 <!-- End of complete div -->
             </div>
-<!--             </div>
- -->            
-
-
+            <!--             </div>
+                -->            
             {% for key, value in trip_plan_object.items %}
-
-
-            
-
-                <div class="all_divs" style="display: block;">
-                    <div class="row second_container d-flex justify-content-between w-75">
-                        <span class="date_of_trip PlanSubtitleRedesign_title">{{value.date_to_show}}</span>
-                        <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
-                            border-radius: 20px;
-                            height: 36px;
-                            min-width: 36px;
-                            min-height: 36px;border: none;" class="date_in_calendar">
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
-                            </svg>
-                            {{value.date_to_show_in_calendar}}
-                        </button>
-                    </div>
-                    <br>
-                    <div class="main_place_div" id="main_place_div">
+            <div class="all_divs" style="display: block;">
+                <div class="row second_container d-flex justify-content-between w-75">
+                    <span class="date_of_trip PlanSubtitleRedesign_title">{{value.date_to_show}}</span>
+                    <button style="padding-left: 16px;padding-right:16px;background-color: #e9ecef;
+                        border-radius: 20px;
+                        height: 36px;
+                        min-width: 36px;
+                        min-height: 36px;border: none;" class="date_in_calendar">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path>
+                        </svg>
+                        {{value.date_to_show_in_calendar}}
+                    </button>
+                </div>
+                <br>
+                <div class="main_place_div" id="main_place_div">
                     {% for key_items, value_items in value.day_trip_details.items %}
-                        
-                        <div class="entire_place" id="entire_place">
-                            <div class="row third_container d-flex justify-content-between w-75">           
+                    <div class="entire_place" id="entire_place">
+                        <div class="row third_container d-flex justify-content-between w-75">
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-right:0px  !important;">
-                            <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
-                        </div>
+                                <i class="fa fa-map" style="color:dodgerblue;font-size: 30px;"></i>
+                            </div>
                             <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-6">             
-
-                            <input type="text" name=" Add a place here" value="{{value_items.place}}" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
-                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" id="duplicater_add_note_button" onclick="duplicate_note(this)"  class="duplicate_note">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                            <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-                                        </svg>
-                                        Note
-                                    </button>
-                                    {% if key_items == "0" %}
-                                    <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  onclick="duplicate_place(this)">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                            <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-                                        </svg>
-                                        Add Places
-                                    </button>
-
-                                    
-                                    {% else %}
-                                     <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;" onclick="remove_icon_place(this)"></i>
-                                     {% endif %}
-                                </div>
-
-                                
-
+                                <input type="text" name=" Add a place here" value="{{value_items.place}}" placeholder="     Add a place here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="add_a_place_here">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;display: none;" id="duplicater_add_note_button" onclick="duplicate_note(this)"  class="duplicate_note">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Note
+                                </button>
+                                {% if key_items == "0" %}
+                                <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" class="add_place_button" id="add_place_button"  onclick="duplicate_place(this)">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-fw fa-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                    </svg>
+                                    Add Places
+                                </button>
+                                {% else %}
+                                <i class="remove_icon_place fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;" onclick="remove_icon_place(this)"></i>
+                                {% endif %}
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                {% if key_items == "0" %}
+                                <input type="number" name="Budget" value="{{value.daily_budget}}" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="note_div">
+                            {% for items in value_items.notes %}
+                            <div class="note_input row third_container d-flex w-75" >
                                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                    {% if key_items == "0" %}
-                                    <input type="text" name="Budget" value="{{value.daily_budget}}" placeholder="  Add daily budget" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;" class="daily_budget">
-                                     {% endif %}
                                 </div>
-
-                               
-
-                            </div>
-                            <br>
-                            <div class="note_div">
-                                {% for items in value_items.notes %}
-
-                                 <div class="note_input row third_container d-flex w-75" >
-                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                
-                                    </div>
-                                    <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
-                                        <input type="text" name=" Add a place here" value="{{items}}" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note">
-                                    </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">
+                                    <textarea name=" Add a place here" value="{{items}}" placeholder="    Write your note here" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" class="text_note"></textarea>
                                 </div>
-                                {% endfor %}
-
-                               
                             </div>
-                            <!-- Custom List -->
-                            {% for items in value_items.title_list %}
-                            
-                            
-                            <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
+                            {% endfor %}
+                        </div>
+                        <!-- Custom List -->
+                        {% for items in value_items.title_list %}
+                        <div class="custom_list row d-flex justify-content-between w-75" style="margin-left: 6%;width: 85% !important;left: 32px;right: 32px;margin-right: auto;">
                             <div class="custom_list_header_input col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"  id="custom_list_header_input">
                             </div>
                             <div class="custom_list_header_input col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3"  id="custom_list_header_input">
@@ -270,10 +211,7 @@
                             </div>
                             <div class="custom_list_input col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5"  id="custom_list_input">
                                 <input type="text" name=" Add a place here" value="{{items.value}}" placeholder="    Add a title" class="reverse-input list_value" style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;min-width: 100%;border-radius: 8px;" >
-
                             </div>
-                            
-                            
                             <div class="custom_list_button col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="custom_list_button" >
                                 {% if items.index == 0 %}
                                 <button style="height: 48px;background: #f3f4f5;box-shadow: none;border: none;border-radius: 8px;padding: 15px;" onclick="duplicate_custom_list(this)" >
@@ -282,81 +220,104 @@
                                     </svg>
                                     Add list
                                 </button>
-
                                 {% else %}
                                 <i class="remove_icon_list fa fa-remove" style="font-size:30px;color:red;padding: 3px;cursor: pointer;" onclick="remove_icon_list(this)"></i>
-
                                 {% endif %}
-                                
                             </div>
-
-                            
                         </div>
-                            {% endfor %}
-                        </div>
-                        <br>
-                    
-                    {% endfor %}
+                        {% endfor %}
                     </div>
-                    <h2 style="width: 100%; 
-                        text-align: center; 
-                        border-bottom: 1px solid #000; 
-                        line-height: 0.1em;
-                        margin: 10px 0 20px;background:#fff; 
-                        padding:0 10px; "><span style="background:#fff; 
-                        padding:0 10px; color: dodgerblue;cursor: pointer;" onclick="duplicate_day()">Add Day</span></h2>
                     <br>
-                    <!-- End of custom list -->
-                    <!-- End of complete div -->
+                    {% endfor %}
                 </div>
-
+                <h2 class="add_day_h2"><button class="outline_btn info" onclick="duplicate_day()">Add Day</button></h2>
+                <br>
+                <!-- End of custom list -->
+                <!-- End of complete div -->
+            </div>
             {% endfor %}
-            
-
-
-
-
         </div>
-        <h2 style="width: 100%; 
-        text-align: center;          
-        margin: 10px 0 20px;background:#fff; 
-        padding:0 10px;"><span style="background:#fff; 
-        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 5px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
-        <h2 style="width: 100%; 
-        text-align: center;          
-        margin: 10px 0 20px;background:#fff; 
-        padding:0 10px;"><span style="background:#fff; 
-        padding:10px; color: white;cursor: pointer;background: dodgerblue;border-radius: 5px;" onclick="save_itinerary_button()">Save Itinerary</span></h2>
 
+        {% include 'ViageApp/trip_plan/trip_footer.html' %}
 
+        <div class="modal fade" id="filepond_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-left: 0px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;" >
+            <input type="file"  id = "file_pond_input"
+                class="filepond"
+                name="filepond"
+                accept="image/png, image/jpeg, image/gif"/>
+        </div>
+    </body>
+    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+    <!-- <script src ="{% static 'ViageApp/js/filepond_upload_js.js' %}" ></script> -->
+    <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
+    <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
+    <script src="{% static 'ViageApp/js/bootstrap.js' %}"></script>
+    <script type="text/javascript">
 
-<div class="modal fade" id="filepond_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-left: 0px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;" >
-        <input type="file"  id = "file_pond_input"
-        class="filepond"
-        name="filepond"
-        accept="image/png, image/jpeg, image/gif"/>
-</div>
+        window.start_date = "{{start_date}}";
+        window.end_date = "{{end_date}}";
+        window.day = {{total_days}};
+        let important_things_for_trip = {{important_things_for_trip | safe}}
+        console.log(important_things_for_trip)
+        let editor = new EditorJS({
+        holderId: "editorJS",
+        minHeight: 0,
+        tools: {
+            header: {
+                class: Header,
+                inlineToolbar: ["link"]
+            },
+            list: {
+                class: List,
+                inlineToolbar: true
+            },
+            paragraph: {
+                class: Paragraph,
+                inlineToolbar: true,
+            },
+            embed: {
+                class: Embed,
+                inlineToolbar: false,
+                config: {
+                    services: {
+                        youtube: true,
+                        coub: true
+                    }
+                }
+            }
+        }
+        });
 
-</body>
+        let btnReset = document.getElementById("btnReset");
+        btnReset.addEventListener("click", () => {
+            editor.clear();
+        });
+        if(important_things_for_trip["blocks"].length != 0){
+            editor.isReady
+                .then(() => {
+                    editor.render(important_things_for_trip)
+                })
+                .catch((reason) => {
+                    console.log(`Editor.js initialization failed because of ${reason}`)
+                });
+        }
 
-<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
-
-
-   
-
-
-<script type="text/javascript">
-
-
-let chunkUploads = true
+        let chunkUploads = true
 let chunkSize = 50000
 let labelButtonDownloadItem = true
 let allowDownloadByUrl = true
-let files_flight = []
+
+
+let final_file_list = {{ final_file_list | safe }}
 var uploaded = {};
 var uploadIdFilenames = {}; 
 var uploaded_error = {};
@@ -380,6 +341,7 @@ let server = {
         let file_id = file.id
         let filename = file.filename.replaceAll(" ","_").replaceAll("/","_").replaceAll("$","_")
         console.log(type_of_attachment)
+        console.log(file.serverId)
         let options = {
               method: 'POST',
               headers: {
@@ -401,7 +363,10 @@ let server = {
         fetchRes.then(res =>
           res.json()).then(response => {
               response = response;
-              console.log(response)
+              console.log(response);
+
+
+
           })
     }
 
@@ -418,7 +383,7 @@ let server = {
           if(file.id in uploaded) delete uploaded[file.id];
     }
 
-    function onerror(file,status){
+    function onerror(file,status,error){
         console.log('File error: [' + error + ']   file: [' + file.id + '], status [' + status + ']');
         if(file.id in uploaded) {
             delete uploaded[file.id];
@@ -438,11 +403,21 @@ let server = {
     chunkSize: chunkSize,
     labelButtonDownloadItem: labelButtonDownloadItem, // by default 'Download file'
     allowDownloadByUrl: allowDownloadByUrl, // by default downloading by URL disabled,
-    files: files_flight,
+    files: final_file_list,
     server: server,
     onaddfile: function(error, file) {},
     onprocessfile: function(error, file) {
       onprocessfile(file,type_of_attachment)
+      file_file = file.file;
+      
+      var li_element = document.getElementById("filepond--item-" + file.id)
+      li_element.style.cursor = "pointer";
+      file_path = window.origin +  file.source
+      li_element.setAttribute('onclick','window.open("' + file_path  + '")') // for FF
+      // const link = document.createElement('a');
+      // link.download = file.name;
+      // link.href = URL.createObjectURL(file);
+
     },
     onremovefile: function(error, file) {
         ondeletefile(file,type_of_attachment)
@@ -452,92 +427,4 @@ let server = {
     }
 
     });
-
-
-
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
-
-<script type="text/javascript">
-    const editor = new EditorJS({
-      holderId: "editorJS",
-      minHeight : 0,
-      tools: {
-        header: {
-          class: Header,
-          inlineToolbar: ["link"]
-        },
-        list: {
-          class: List,
-          inlineToolbar: true
-        },
-        paragraph: {
-        class: Paragraph,
-        inlineToolbar: true,
-      },
-        embed: {
-          class: Embed,
-          inlineToolbar: false,
-          config: {
-            services: {
-              youtube: true,
-              coub: true
-            }
-          }
-        }
-      }
-    });
-
-
-    let btnReset = document.getElementById("btnReset");
-    btnReset.addEventListener("click", () => {
-      editor.clear();
-    });
-</script>
-
-
- <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
-    <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
-    <script src="{% static 'ViageApp/js/home.js' %}"></script>
-
-    <script src="{% static 'ViageApp/js/bootstrap.js' %}"></script>
-
-    <script type="text/javascript">
-
-        
-        window.onload = function() {
-            document.getElementById("start_date-end_date").innerHTML = '' + new Date("{{start_date}}").toLocaleDateString("en-US") + ' - ' + new Date("{{end_date}}").toLocaleDateString("en-US");
-            let start_date = new Date("{{start_date}}");
-            let end_date =  new Date("{{end_date}}");
-            document.getElementById("start_date-end_date").innerHTML = `<input id="trip_start" style="border:none;width:85px;cursor:pointer;"></input> -  <input id="trip_end" style="border:none;width:85px;cursor:pointer;"></input><span id="update_dates" onclick="update_dates()" style="color:blue;">Update dates</span>`
-        }
-        
-        const getDatesBetweenDates = (startDate, endDate) => {
-          let dates = []
-          //to avoid modifying the original date
-          const theDate = new Date(startDate)
-          while (theDate <= endDate) {
-            dates = [...dates, new Date(theDate)]
-            theDate.setDate(theDate.getDate() + 1)
-          }
-          console.log(dates)
-          return dates
-        }
-
-        var dates_between = getDatesBetweenDates(new Date("{{start_date}}"),new Date("{{end_date}}"));
-        window.dates_between = dates_between;
-
-        
     </script>
-
-    <script type="text/javascript">
-        window.start_date = "{{start_date}}";
-        window.end_date = "{{end_date}}";
-        window.day = {{total_days}}
-    </script>
-    

@@ -1173,51 +1173,6 @@
 
 
 <script type="text/javascript">
-        function getPDF(){
-
-        for(var i=0;i<document.getElementsByTagName('input').length;i++){document.getElementsByTagName('input')[i].style.backgroundColor = "white"}
-        for(var i=0;i<document.getElementsByClassName('duplicate_note').length;i++){document.getElementsByClassName('duplicate_note')[i].style.display = "none"}
-        for(var i=0;i<document.getElementsByClassName('add_place_button').length;i++){document.getElementsByClassName('add_place_button')[i].style.display = "none"}
-        for(var i=0;i<document.getElementsByClassName('remove_icon_notes').length;i++){document.getElementsByClassName('remove_icon_notes')[i].style.display = "none"}
-        for(var i=0;i<document.getElementsByClassName('custom_list').length;i++){document.getElementsByClassName('custom_list')[i].style.display = "none"}
-
-        var HTML_Width = $("#main").width();
-        var HTML_Height = $("#main").height();
-        var top_left_margin = 0;
-        var PDF_Width = HTML_Width;
-        var PDF_Height = HTML_Height;
-        console.log(PDF_Height)
-        var canvas_image_width = HTML_Width;
-        var canvas_image_height = HTML_Height;
-        
-        var totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
-        
-
-        html2canvas($("#main")[0],{
-                allowTaint:false,
-                scale : 5.0,
-                enableLinks: true
-            }).then(function(canvas) {
-            canvas.getContext('2d');
-            
-            console.log(canvas.height+"  "+canvas.width);
-            
-            console.log(canvas.toDataURL)
-            var imgData = canvas.toDataURL("image/jpeg", 0.2);
-            var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
-
-            pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
-            
-            
-            for (var i = 1; i <= totalPDFPages; i++) { 
-                pdf.addPage(PDF_Width, PDF_Height);
-                pdf.addImage(imgData, 'JPEG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
-            }
-            
-            pdf.save("HTML-Document.pdf");
-        });
-    };
-
 
     function savePdf0 () {
       let opt = {

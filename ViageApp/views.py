@@ -2,6 +2,8 @@
 import logging
 import os
 import sys
+import random
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.response import Response
@@ -49,10 +51,17 @@ def index(request):
 		raise_info("Inside Index Page")
 		config_object = Config.objects.all()[0]
 		place_images = PlaceImages.objects.all()
-		print(request.user)
+		strategy_array = config_object.strategy_array.split("$$$")
+		strategy_content_array = config_object.strategy_content_array.split("$$$")
+		strategy_array_images = config_object.strategy_array_images.split("$$$")
+
+
+		final_strategy_content = zip(strategy_array,strategy_content_array,strategy_array_images)
+		print(final_strategy_content)
 		return render(request, 'ViageApp/home/home.html',{
 			"config_object":config_object,
-			"place_images":place_images
+			"place_images":place_images,
+			"final_strategy_content":final_strategy_content
 			})
 	except Exception as e:
 		raise_exception("HomePage has an error")
@@ -67,6 +76,8 @@ def HomePage(request):
 		start_date = request.GET["start_date"]
 		end_date = request.GET["end_date"]
 		image_corresponding_to_place = PlaceImages.objects.filter(place=place_to_visit)[0].images
+		image_corresponding_to_place = image_corresponding_to_place.split(",")
+		image_corresponding_to_place = random.choice(image_corresponding_to_place)		
 
 		return render(request,'ViageApp/trip_plan/home.html',{
 			"place_to_visit":place_to_visit,
@@ -81,18 +92,31 @@ def HomePage(request):
 
 def TripPlan(request):
 	try:
-		raise_info("Inside Trip Plan Page")
-		place_to_visit = request.GET["place_to_visit"]
-		start_date = request.GET["start_date"]
-		end_date = request.GET["end_date"]
-		image_corresponding_to_place = PlaceImages.objects.filter(place=place_to_visit)[0].images
+		if request.user.is_authenticated:
+			raise_info("Inside Trip Plan Page")
+			place_to_visit = request.GET["place_to_visit"]
+			start_date = request.GET["start_date"]
+			end_date = request.GET["end_date"]
+			image_corresponding_to_place = PlaceImages.objects.filter(place=place_to_visit)[0].images
+			image_corresponding_to_place = image_corresponding_to_place.split(",")
+			image_corresponding_to_place = random.choice(image_corresponding_to_place)
+			dont_allow_attachment_to_save = True
+			important_things_for_trip = {}
+			default_start_budget = 5000
+			default_end_budget = 5000
 
-		return render(request,'ViageApp/trip_plan/tripplan.html',{
-			"place_to_visit":place_to_visit,
-			"image_corresponding_to_place":image_corresponding_to_place,
-			"start_date":start_date,
-			"end_date":end_date
-			})
+			return render(request,'ViageApp/trip_plan/tripplan.html',{
+				"place_to_visit":place_to_visit,
+				"image_corresponding_to_place":image_corresponding_to_place,
+				"start_date":start_date,
+				"end_date":end_date,
+				"dont_allow_attachment_to_save":dont_allow_attachment_to_save,
+				"important_things_for_trip":important_things_for_trip,
+				"start_budget":default_start_budget,
+				"end_budget":default_end_budget
+				})
+		else:
+			return HttpResponse("You are not authenticated to use this page.")
 	except Exception as e:
 		raise_exception("Trip Plan has an error")
 		return HttpResponse("We are facing some maintainance activity")
@@ -105,13 +129,25 @@ def BookTrip(request):
 		
 		trip_plan_data = data['trip']
 		pk = data['pk']
+		user_pk = data['user_pk']
+		important_things_for_trip = data['important_things_for_trip']
+		user = User.objects.get(pk=user_pk)
+		start_budget = data['start_budget']
+		end_budget = data['end_budget']
 
 		if(pk == ""):
-			trip_plan = TripPlanning.objects.create(trip_details=trip_plan_data)
+			trip_plan = TripPlanning.objects.create(trip_details=trip_plan_data,
+													user=user,
+													important_things_for_trip=important_things_for_trip,
+													start_budget=start_budget,
+													end_budget=end_budget)
 			pk = trip_plan.pk
 		else:
 			trip_plan = TripPlanning.objects.get(pk=pk)
 			trip_plan.trip_details = trip_plan_data
+			trip_plan.important_things_for_trip = important_things_for_trip
+			trip_plan.start_budget = start_budget
+			trip_plan.end_budget = end_budget
 			trip_plan.save()
 		pk = trip_plan.pk
 		response = {"status_code":"200", "pk": pk}
@@ -129,22 +165,41 @@ def EditTrip(request):
 		start_date = request.GET["start_date"]
 		end_date = request.GET["end_date"]
 		image_corresponding_to_place = PlaceImages.objects.filter(place=place_to_visit)[0].images
+		image_corresponding_to_place = image_corresponding_to_place.split(",")
+		image_corresponding_to_place = random.choice(image_corresponding_to_place)
 
-		trip_plan_object = TripPlanning.objects.get(pk=pk).trip_details
-		total_days = len(trip_plan_object)
-		print(total_days)
-		
+		trip_plan_object = TripPlanning.objects.get(pk=pk)
+		trip_details = trip_plan_object.trip_details
+		total_days = len(trip_details)
+		important_things_for_trip = trip_plan_object.important_things_for_trip
+		start_budget = trip_plan_object.start_budget
+		end_budget = trip_plan_object.end_budget
+		files_flight = json.loads(trip_plan_object.flights)
+		files_accomadation = json.loads(trip_plan_object.accomodation)
+		files_cars = json.loads(trip_plan_object.cars)
+		files_train = json.loads(trip_plan_object.train)
+		files_bus = json.loads(trip_plan_object.bus)
+
+		final_file_list = files_flight + files_accomadation + files_cars + files_train + files_bus
+
 		return render(request,'ViageApp/trip_plan/tripedit.html',{
-			"trip_plan_object":trip_plan_object,
+			"trip_plan_object":trip_details,
 			"place_to_visit":place_to_visit,
 			"image_corresponding_to_place":image_corresponding_to_place,
 			"start_date":start_date,
 			"end_date":end_date,
-			"total_days":total_days
+			"total_days":total_days,
+			"important_things_for_trip":important_things_for_trip,
+			"start_budget":start_budget,
+			"end_budget":end_budget,
+			"final_file_list" : final_file_list,
+			
 			})
 	except Exception as e:
 		raise_exception("Error in EditTrip")
 		return HttpResponse("We are facing some maintainance activity")
+
+
 
 def TestHtml(request):
 	try:
@@ -155,6 +210,7 @@ def TestHtml(request):
 @api_view(('POST',))
 def SaveAttachments(request):
 	try:
+
 		data = request.data
 		type_of_attachment = data["type_of_attachment"]
 		id_of_attachment = data["id_of_attachment"]
@@ -178,42 +234,43 @@ def SaveAttachments(request):
 
 		trip_object = TripPlanning.objects.get(pk=trip_pk)
 
+		http_host_with_files = "/files/"
+		file_path_to_append =  http_host_with_files + type_of_attachment + "/" + filename
+
 		if type_of_attachment == "flights":
-			
 			flights = json.loads(trip_object.flights)
-			flights.append(file_path)
-			trip_object.flights = json.dumps(flights)
+			flights.append(file_path_to_append)
+			trip_object.flights = json.dumps(list(set(flights)))
 
 		elif type_of_attachment == "lodging":
 
 			accomodation = json.loads(trip_object.accomodation)
-			accomodation.append(file_path)
-			trip_object.accomodation = json.dumps(accomodation)
+			accomodation.append(file_path_to_append)
+			trip_object.accomodation = json.dumps(list(set(accomodation)))
 
 		elif type_of_attachment == "cars":
 
 			cars = json.loads(trip_object.cars)
-			cars.append(file_path)
-			trip_object.cars = json.dumps(cars)
+			cars.append(file_path_to_append)
+			trip_object.cars = json.dumps(list(set(cars)))
 
 		elif type_of_attachment == "bus":
 
 			bus = json.loads(trip_object.bus)
-			bus.append(file_path)
-			trip_object.bus = json.dumps(bus)
+			bus.append(file_path_to_append)
+			trip_object.bus = json.dumps(list(set(bus)))
 
 		elif type_of_attachment == "train":
 
 			train = json.loads(trip_object.train)
-			train.append(file_path)
-			trip_object.train = json.dumps(train)
+			train.append(file_path_to_append)
+			trip_object.train = json.dumps(list(set(train)))
 
 		trip_object.save()
 		response = {"status_code":"200", "pk": trip_pk}
 		return Response(data=response)
 	except Exception as e:
 		exc_type, exc_obj, exc_tb = sys.exc_info()
-		print(exc_tb.tb_lineno)
 		raise_exception("Error in SaveAttachment")
 		response = {"status_code":"500", "pk": trip_pk}
 		return Response(data=response)
@@ -225,7 +282,6 @@ def DeleteAttachments(request):
 		trip_pk = data["trip_pk"]
 		file_id = data["name_of_attachment"]
 		type_of_attachment = data["type_of_attachment"]
-			
 		full_file_path = settings.MEDIA_ROOT + type_of_attachment + "/" + file_id
 
 		# Only for local
@@ -233,11 +289,46 @@ def DeleteAttachments(request):
 		command = "rm -rf "+full_file_path
 		remove_file = os.system('echo %s|sudo -S %s' % (sudoPassword, command))
 
+		trip_object = TripPlanning.objects.get(pk=trip_pk)
+
+		http_host_with_files = "/files/"
+		file_path_to_append =  http_host_with_files + type_of_attachment + "/" + file_id
+
+		if type_of_attachment == "flights":
+			flights = json.loads(trip_object.flights)
+			flights.remove(file_path_to_append)
+			trip_object.flights = json.dumps(list(set(flights)))
+
+		elif type_of_attachment == "lodging":
+
+			accomodation = json.loads(trip_object.accomodation)
+			accomodation.remove(file_path_to_append)
+			trip_object.accomodation = json.dumps(list(set(accomodation)))
+
+		elif type_of_attachment == "cars":
+
+			cars = json.loads(trip_object.cars)
+			cars.remove(file_path_to_append)
+			trip_object.cars = json.dumps(list(set(cars)))
+
+		elif type_of_attachment == "bus":
+
+			bus = json.loads(trip_object.bus)
+			bus.remove(file_path_to_append)
+			trip_object.bus = json.dumps(list(set(bus)))
+
+		elif type_of_attachment == "train":
+
+			train = json.loads(trip_object.train)
+			train.remove(file_path_to_append)
+			trip_object.train = json.dumps(list(set(train)))
+
+		trip_object.save()
+
 		response = {"status_code":"200", "pk": trip_pk}
 
 		return Response(data=response)
 	except Exception as e:
-		print(str(e))
 		raise_exception("Error in DeleteAttachments")
 		response = {"status_code":"500", "pk" : trip_pk}
 		return Response(data=response)
@@ -281,22 +372,12 @@ def LoginAPI(request):
 		response = {}
 		email_address = data["email_address"]
 		password = data["password"]
-		# if user:
-		print(email_address)
-		print(password)
 		user = authenticate(request,username=email_address,password=password)
-		print(user)
 		login(request, user,
                       backend='django.contrib.auth.backends.ModelBackend')
 		response['status_code'] = "200"
 		response['status_message'] = "Success"
-		# else:
-		# 	response['status_code'] = "400"
-		# 	response["status_message"] = "User does not exist"
-
-
-
-
+		
 	except Exception as e:
 		raise str(e)
 		raise_exception("Error in SignUpUser")

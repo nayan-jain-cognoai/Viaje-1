@@ -12,6 +12,24 @@ from ViageApp.constants import *
 
 # Create your models here.
 
+class User(AbstractUser):
+	type_of_user = models.CharField(max_length=256,
+							null=False,
+							blank=False,
+							choices=TYPE_OF_USER,
+							help_text='Role of a user where user can be "agent" or "customer".',
+							)
+
+	def save(self, *args, **kwargs):
+		if self.pk == None:
+			self.set_password(self.password)
+		elif not self.password.startswith("pbkdf2_sha256"):
+			self.set_password(self.password)
+		super(User, self).save(*args, **kwargs)
+	
+	class Meta:
+		verbose_name = "User"
+		verbose_name_plural = "Users"
 
 class Config(models.Model):
 	header_array = models.TextField(blank=True,default="EXCELLENT SERVICE,100 PERCENT TRUST,TOP ITINERARIES")
@@ -22,6 +40,7 @@ class Config(models.Model):
 	by_ceo = models.TextField(blank=True,default="Raj Sanghavi")
 	strategy_array = models.TextField(blank=True,default="Environment Analysis $$$ Development Planning $$$ Execution & Evaluation")
 	strategy_content_array = models.TextField(blank=True,default="The starting point of any success story is knowing your current position in the business environment $$$ After completing the environmental analysis the next stage is to design and  plan your development strategy $$$ In this phase you will focus on executing the actions plan and evaluating the results after each marketing campaign")
+	strategy_array_images = models.TextField(blank=True, default = "")
 	acceleration_content = models.TextField(blank=True,default="Accelerate Business Growth To Improve Revenue Numbers")
 	acceleration_content_header_array = models.TextField(blank=True,default="How Can Aria Help Your Business $$$ Great Strategic Business Planning $$$ Online Marketing Campaigns")
 	acceleration_content_array = models.TextField(blank=True,default="The starting point of any success story is knowing your current position in the business environment $$$ After completing the environmental analysis the next stage is to design and  plan your development strategy $$$ In this phase you will focus on executing the actions plan and evaluating the results after each marketing campaign")
@@ -31,6 +50,8 @@ class Config(models.Model):
 	interested_in_options = models.TextField(blank=True,default="It's very easy just fill in the form so we can call $$$ During the call we'll require some info about the company $$$ Don't hesitate to email us for any questions or inquiries")
 	agree_policy = models.TextField(blank=True,default="I agree to Viage's policy to use personal information to call me for details")
 	footer = models.TextField(blank=True,default="© 2021 All Right Reserved")
+	number_of_agents_message = models.TextField(blank=True,default="")
+	number_of_locations_message = models.TextField(blank=True,default="")
 
 	def save(self, *args, **kwargs):
 		super(Config, self).save(*args, **kwargs)
@@ -59,6 +80,11 @@ class TripPlanning(models.Model):
 	cars = models.TextField(default="[]")
 	bus = models.TextField(default="[]")
 	train = models.TextField(default="[]")
+	user = models.ForeignKey(
+        User, null=True, blank=True, on_delete=models.CASCADE)
+	important_things_for_trip = models.TextField(default="",blank=True,null=True)
+	start_budget = models.IntegerField(default=0,blank=True,null=True)
+	end_budget = models.IntegerField(default=0,blank=True,null=True)
 
 	def save(self, *args, **kwargs):
 		super(TripPlanning, self).save(*args, **kwargs)
@@ -71,6 +97,7 @@ class PlaceImages(models.Model):
 	place = models.TextField(default="")
 	images = models.TextField(default="")
 
+
 	def save(self,*args,**kwargs):
 		super(PlaceImages,self).save(*args, **kwargs)
 
@@ -79,22 +106,5 @@ class PlaceImages(models.Model):
 		verbose_name_plural = 'PlaceImages'
 
 
-class User(AbstractUser):
-	type_of_user = models.CharField(max_length=256,
-							null=False,
-							blank=False,
-							choices=TYPE_OF_USER,
-							help_text='Role of a user where user can be "agent" or "customer".',
-							)
 
-	def save(self, *args, **kwargs):
-		if self.pk == None:
-			self.set_password(self.password)
-		elif not self.password.startswith("pbkdf2_sha256$36000$"):
-			self.set_password(self.password)
-		super(User, self).save(*args, **kwargs)
-	
-	class Meta:
-		verbose_name = "User"
-		verbose_name_plural = "Users"
 

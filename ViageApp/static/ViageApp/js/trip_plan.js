@@ -88,3 +88,13 @@ function get_url_vars() {
     return vars;
 }
 
+function getPDF(){
+        html2canvas($('#body-content').get(0)).then( function (canvas) {
+            console.log(canvas);
+            var a = document.createElement('a');
+            // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
+            a.href = canvas.toDataURL("image/jpeg");
+            a.download = 'screenshot.jpg';
+            a.click();
+        });
+}

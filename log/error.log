@@ -1,3 +1,104 @@
-Error ['place_to_visit'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [89] :-Message [Trip Plan has an error]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [251] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [251] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [251] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [can only concatenate str (not "NoneType") to str] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in SaveAttachment]
+Error [{'/Users/nayanjain/Documents/GitHub/Viage/files/flights/Screenshot_2022-02-28_at_9.00.21_PM.png'} is not JSON serializable] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in SaveAttachment]
 Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
 Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [name 'filename' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [324] :-Message [Error in DeleteAttachments]
+Error [name 'filename' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [324] :-Message [Error in DeleteAttachments]
+Error [name 'filename' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [324] :-Message [Error in DeleteAttachments]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [78] :-Message [HomePage has an error]
+Error [Invalid block tag on line 4: 'static'. Did you forget to register or load this tag?] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [111] :-Message [Trip Plan has an error]
+Error [Could not parse the remainder: '{{image_corresponding_to_place}}' from ''ViageApp/assets/images/places/'{{image_corresponding_to_place}}'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [111] :-Message [Trip Plan has an error]
+Error [name 'place_images' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [58] :-Message [HomePage has an error]
+Error [Invalid filter: 'convert_to_list'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Invalid filter: 'convert_to_list'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [get_at_index requires 2 arguments, 1 provided] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [get_at_index requires 2 arguments, 1 provided] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [get_at_index requires 2 arguments, 1 provided] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [get_at_index requires 2 arguments, 1 provided] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [get_at_index requires 2 arguments, 1 provided] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [get_at_index requires 2 arguments, 1 provided] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'config_object.strategy_array | convert_to_list[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Invalid block tag on line 359: 'set'. Did you forget to register or load this tag?] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [Invalid block tag on line 359: 'set'. Did you forget to register or load this tag?] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [60] :-Message [HomePage has an error]
+Error [column ViageApp_config.strategy_array_images does not exist
+LINE 1: ...ray", "ViageApp_config"."strategy_content_array", "ViageApp_...
+                                                             ^
+] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [62] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'items[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [67] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'items[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [67] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[loop.index0]' from 'items[loop.index0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [67] :-Message [HomePage has an error]
+Error [Could not parse the remainder: '[0]' from 'items[0]'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [67] :-Message [HomePage has an error]
+Error [Invalid block tag on line 355: 'set', expected 'empty' or 'endfor'. Did you forget to register or load this tag?] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [66] :-Message [HomePage has an error]
+Error ['set' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+viagetemplate] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [66] :-Message [HomePage has an error]
+Error ['set' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+viagetemplate] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [66] :-Message [HomePage has an error]
+Error ['set' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+viagetemplate] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [67] :-Message [HomePage has an error]
+Error ['set' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+viagetemplate] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [67] :-Message [HomePage has an error]
