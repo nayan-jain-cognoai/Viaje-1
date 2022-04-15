@@ -22,7 +22,7 @@ html {
     font-weight: normal;
     font-size: 30px;
     padding-left: 20px;
-    color: black !important;
+    color: white !important;
 }
 
 .start_background, .start_background_trip{
@@ -40,8 +40,12 @@ html {
     font-weight: normal;
     font-size: 45px;
     line-height: 60px;
-    color: black !important;
+    color: white !important;
 }
+.company_one_liner{
+        font-size: 30px;
+        color: white !important;
+    }
 
 .company_description
 {
@@ -51,7 +55,7 @@ html {
     font-size: 18px;
     line-height: 33px;
 
-    color: black !important;
+    color: white !important;
 }
 
 
@@ -100,6 +104,9 @@ html {
         font-size: 50px;
     line-height: 65px;
     }
+    .company_one_liner{
+        font-size: 35px;
+    }
     .seventh_con{
         display: none;
     }
@@ -131,6 +138,9 @@ html {
     .company_tagline{
         font-size: 55px;
     line-height: 70px;
+    }
+    .company_one_liner{
+        font-size: 40px;
     }
     .newsletter_content_1{
         display: none;
@@ -167,6 +177,9 @@ html {
         font-size: 55px;
     line-height: 70px;
     }
+    .company_one_liner{
+        font-size: 40px;
+    }
     .newsletter_content_1{
         display: none;
     }
@@ -199,7 +212,10 @@ html {
     }
     .company_tagline{
         font-size: 55px;
-    line-height: 70px;
+        line-height: 70px;
+    }
+    .company_one_liner{
+        font-size: 40px;
     }
     .newsletter_content_1{
         display: none;
@@ -730,7 +746,7 @@ color: #656060;
 
 
 .nav-link{
-    color: black !important;
+    color: white !important;
 }
 /* @media (min-width:641px)  { portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones } */
 /* @media (min-width:961px)  { tablet, landscape iPad, lo-res laptops ands desktops } */
