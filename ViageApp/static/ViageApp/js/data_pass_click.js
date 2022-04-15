@@ -215,3 +215,41 @@ function create_itinerary() {
     let end_date = url_parameters["end_date"];
     window.location.href = "/trip_plan/?place_to_visit=" + place_to_visit + "&start_date=" + start_date + "&end_date=" + end_date;
 }
+
+
+function request_itinerary(user_pk){
+    let url_parameters = get_url_vars();
+    let place_to_visit = url_parameters["place_to_visit"];
+    let start_date = url_parameters["start_date"];
+    let end_date = url_parameters["end_date"];
+    const csrftoken = Cookies.get('csrftoken');
+    
+    let options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'X-CSRFToken': csrftoken
+        },
+        body: JSON.stringify({
+            "place_to_visit":place_to_visit,
+            "start_date":start_date,
+            "end_date":end_date,
+            "user_pk":user_pk
+            
+        })
+    }
+
+    let fetchRes = fetch("/request_trip/", options);
+    let response;
+
+    fetchRes.then(res =>
+        res.json()).then(response => {
+        response = response;
+        if(response["status_code"] == "200"){
+            alert("Your request has been raised, our supervisors will contact you.")
+        }else{
+            alert("Facing some internal issues")
+        }
+        
+    })
+}

@@ -16,7 +16,8 @@ urlpatterns = [
     path('delete-attachment/',views.DeleteAttachments, name="delete_attachment"),
     path('signup/',views.SignUpUser,name="signup_user"),
     path('login/',views.LoginAPI,name="login_user"),
-    path('logout/',views.Logout,name="log_out")
+    path('logout/',views.Logout,name="log_out"),
+    path('request_trip/',views.RaiseRequest,name="raise_request")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

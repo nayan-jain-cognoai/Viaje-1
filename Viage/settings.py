@@ -103,7 +103,7 @@ DATABASES = {
             'PORT': '',
         }
     }
-
+    
 
 AUTH_USER_MODEL = "ViageApp.User"
 
