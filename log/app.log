@@ -1573,3 +1573,410 @@ File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- I
 File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- Inside Index Page
 File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- Inside Index Page
 File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 70 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 51 :- Inside Index Page
+Error [name 'datetime' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [79] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+Error ['PlaceImages' object has no attribute 'split'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [81] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 88 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 88 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 88 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+Error [local variable 'place_obj' referenced before assignment] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [176] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [219] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+Error [local variable 'place_obj' referenced before assignment] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [176] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [219] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+Error [local variable 'place_obj' referenced before assignment] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [176] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [219] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 88 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 88 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 112 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 143 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 93 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 117 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [name 'start_date' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [184] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [229] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [229] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [229] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [['“2022/03/21” value has an invalid date format. It must be in YYYY-MM-DD format.']] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [191] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [236] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [module 'datetime' has no attribute 'strptime'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [193] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [238] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [time data '2022/03/21' does not match format '%y-%m-%d'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [193] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [238] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [time data '2022/03/21' does not match format '%y/%m/%d'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [193] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [238] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [['“2022/03/24” value has an invalid date format. It must be in YYYY-MM-DD format.']] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [193] :-Message [Error in BookTrip]
+Error [['“2022/03/24” value has an invalid date format. It must be in YYYY-MM-DD format.']] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [193] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [238] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [238] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+Error [['“2022/03/24” value has an invalid date format. It must be in YYYY-MM-DD format.']] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [193] :-Message [Error in BookTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 148 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 152 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 152 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [199] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 152 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [199] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [253] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 152 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 152 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 121 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 152 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 53 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 123 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 123 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+Error [Invalid block tag on line 8: 'static'. Did you forget to register or load this tag?] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [119] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+Error [name 'month' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [125] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 133 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [211] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 54 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 97 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 133 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [211] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 133 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [211] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [266] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [211] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [266] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 133 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [212] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [267] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [268] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [213] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [268] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [214] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [269] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [215] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [270] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [216] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [271] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [216] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [271] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 164 :- Inside Book Trip Plan Page
+Error [list index out of range] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [217] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [272] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error [time data 'March%2021,%202022' does not match format '%Y/%m/%d'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [209] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [262] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error [time data 'March 21, 2022' does not match format '%Y/%m/%d'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [209] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [264] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error [time data 'March 21, 2022' does not match format '%Y/%m/%d'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [209] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [264] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+Error [Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10b1f3c70>>": "TripPlanning.user" must be a "User" instance.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [264] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error [TripPlanning matching query does not exist.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [264] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error ['star_trip'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [213] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [264] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error [TripPlanning matching query does not exist.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [213] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [264] :-Message [Error in EditTrip]
+Error [TripPlanning matching query does not exist.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error ['star_trip'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [214] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error ['star_trip'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [214] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+Error ['star_trip'] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [214] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [265] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 98 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 134 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 165 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 55 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+Error ['AnonymousUser' object is not iterable] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [109] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+Error ['AnonymousUser' object is not iterable] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [109] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 186 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+Error [Cannot resolve keyword 'place_obj' into field. Choices are: accomodation, bus, cars, created_date, end_budget, end_date, flights, id, important_things_for_trip, place, place_id, star_itinerary, start_budget, start_date, train, trip_details, user, user_id] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [161] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+Error [Cannot resolve keyword 'place_obj' into field. Choices are: accomodation, bus, cars, created_date, end_budget, end_date, flights, id, important_things_for_trip, place, place_id, star_itinerary, start_budget, start_date, train, trip_details, user, user_id] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [161] :-Message [HomePage has an error]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 170 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+Error [unconverted data remains: #contact] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 170 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+Error [unconverted data remains: #contact] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+Error [unconverted data remains: #contact] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 170 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 170 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+Error [unconverted data remains: #] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in BookTrip]
+Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 170 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 170 :- Inside Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 201 :- Inside Book Trip Plan Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page

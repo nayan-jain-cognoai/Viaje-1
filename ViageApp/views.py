@@ -3,6 +3,11 @@ import logging
 import os
 import sys
 import random
+import datetime
+import linecache
+import os
+import shutil
+
 
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -12,14 +17,14 @@ from rest_framework.response import Response
 from Viage.utils_common import *
 from ViageApp.models import Config,TripPlanning,PlaceImages,User
 from rest_framework.decorators import api_view, renderer_classes
-import linecache
 from inspect import getframeinfo, stack
-import os
 from os import walk
 from django.conf import settings
-import shutil
 
 from django.contrib.auth import authenticate, login, logout
+from urllib.parse import unquote
+from django.contrib.auth import logout
+
 
 logger = logging.getLogger(__name__)
 
@@ -48,6 +53,7 @@ def raise_info(message=''):
 
 def index(request):
 	try:
+		print(request.user)
 		raise_info("Inside Index Page")
 		config_object = Config.objects.all()[0]
 		place_images = PlaceImages.objects.all()
@@ -55,10 +61,53 @@ def index(request):
 		strategy_content_array = config_object.strategy_content_array.split("$$$")
 		strategy_array_images = config_object.strategy_array_images.split("$$$")
 		final_strategy_content = zip(strategy_array,strategy_content_array,strategy_array_images)
+
+		month = datetime.datetime.now().month
+		blank_months = []
+		for items in PlaceImages.objects.all():
+			if str(month) in items.all_months:
+				blank_months.append({
+					"name":items.place,
+					"image_corresponding_to_place":random.choice(items.images.split(","))
+					})
+
+		special_itinerary = []
+		for items in TripPlanning.objects.filter(star_itinerary=True):
+			special_itinerary.append({
+				"name":items.place.place,
+				"image_corresponding_to_place":random.choice(items.place.images.split(",")),
+				"start_budget":items.start_budget,
+				"end_budget":items.end_budget,
+				"pk":items.pk,
+				"start_date":items.start_date.strftime('%Y/%m/%d'),
+				"end_date":items.end_date.strftime('%Y/%m/%d')
+				})
+
+		try:
+			your_itinerary = []
+			for items in TripPlanning.objects.filter(user=request.user):
+				your_itinerary.append({
+					"name":items.place.place,
+					"image_corresponding_to_place":random.choice(items.place.images.split(",")),
+					"start_budget":items.start_budget,
+					"end_budget":items.end_budget,
+					"pk":items.pk,
+					"start_date":items.start_date.strftime('%Y/%m/%d'),
+					"end_date":items.end_date.strftime('%Y/%m/%d')
+					})
+			print(your_itinerary)
+		except Exception as e:
+			print("User not authenticated")
+			pass
+
+
 		return render(request, 'ViageApp/home/home.html',{
 			"config_object":config_object,
 			"place_images":place_images,
-			"final_strategy_content":final_strategy_content
+			"final_strategy_content":final_strategy_content,
+			"blank_months":blank_months,
+			"special_itinerary":special_itinerary,
+			"your_itinerary":your_itinerary
 			})
 	except Exception as e:
 		raise_exception("HomePage has an error")
@@ -72,15 +121,42 @@ def HomePage(request):
 		place_to_visit = request.GET["place_to_visit"]
 		start_date = request.GET["start_date"]
 		end_date = request.GET["end_date"]
-		image_corresponding_to_place = PlaceImages.objects.filter(place=place_to_visit)[0].images
+		place_obj = PlaceImages.objects.filter(place=place_to_visit)[0]
+		image_corresponding_to_place = place_obj.images
 		image_corresponding_to_place = image_corresponding_to_place.split(",")
-		image_corresponding_to_place = random.choice(image_corresponding_to_place)		
+		image_corresponding_to_place = random.choice(image_corresponding_to_place)
 
+		month = datetime.datetime.now().month
+		blank_months = []
+		for items in PlaceImages.objects.all():
+			if str(month) in items.all_months:
+				blank_months.append({
+					"name":items.place,
+					"image_corresponding_to_place":random.choice(items.images.split(","))
+				})
+
+		special_itinerary = []
+		for items in TripPlanning.objects.filter(place=place_obj,star_itinerary=True):
+			special_itinerary.append({
+				"name":items.place.place,
+				"image_corresponding_to_place":random.choice(items.place.images.split(",")),
+				"start_budget":items.start_budget,
+				"end_budget":items.end_budget,
+				"pk":items.pk,
+				"start_date":items.start_date.strftime('%Y/%m/%d'),
+				"end_date":items.end_date.strftime('%Y/%m/%d')
+				})
+		print(special_itinerary)
+
+		
 		return render(request,'ViageApp/trip_plan/home.html',{
 			"place_to_visit":place_to_visit,
 			"image_corresponding_to_place":image_corresponding_to_place,
 			"start_date":start_date,
-			"end_date":end_date
+			"end_date":end_date,
+			"place_obj":place_obj,
+			"blank_months":blank_months,
+			"special_itinerary":special_itinerary
 			})
 	except Exception as e:
 		raise_exception("HomePage has an error")
@@ -89,6 +165,7 @@ def HomePage(request):
 
 def TripPlan(request):
 	try:
+		print(request.user)
 		if request.user.is_authenticated:
 			raise_info("Inside Trip Plan Page")
 			place_to_visit = request.GET["place_to_visit"]
@@ -126,18 +203,39 @@ def BookTrip(request):
 		
 		trip_plan_data = data['trip']
 		pk = data['pk']
+		
 		user_pk = data['user_pk']
 		important_things_for_trip = data['important_things_for_trip']
+		
 		user = User.objects.get(pk=user_pk)
 		start_budget = data['start_budget']
 		end_budget = data['end_budget']
+		place_to_visit = unquote(data['place_to_visit'])
+		place_obj = PlaceImages.objects.filter(place=place_to_visit)[0]
+
+		start_date = unquote(data['start_date'])
+		start_date =  datetime.datetime.strptime(start_date, '%Y/%m/%d')
+		end_date = unquote(data['end_date'])
+		end_date = datetime.datetime.strptime(end_date, '%Y/%m/%d')
+
+		try:
+			star_trip = data["star_trip"]
+		except Exception as e:
+			star_trip = False
+		print(star_trip)
+		if star_trip == "true" and request.user.is_superuser == False:
+			pk = ""
+			print(pk)
 
 		if(pk == ""):
 			trip_plan = TripPlanning.objects.create(trip_details=trip_plan_data,
 													user=user,
 													important_things_for_trip=important_things_for_trip,
 													start_budget=start_budget,
-													end_budget=end_budget)
+													end_budget=end_budget,
+													place=place_obj,
+													start_date=start_date,
+													end_date=end_date)
 			pk = trip_plan.pk
 		else:
 			trip_plan = TripPlanning.objects.get(pk=pk)
@@ -145,6 +243,9 @@ def BookTrip(request):
 			trip_plan.important_things_for_trip = important_things_for_trip
 			trip_plan.start_budget = start_budget
 			trip_plan.end_budget = end_budget
+			trip_plan.place = place_obj
+			trip_plan.start_date = start_date
+			trip_plan.end_date = end_date
 			trip_plan.save()
 		pk = trip_plan.pk
 		response = {"status_code":"200", "pk": pk}
@@ -165,7 +266,16 @@ def EditTrip(request):
 		image_corresponding_to_place = image_corresponding_to_place.split(",")
 		image_corresponding_to_place = random.choice(image_corresponding_to_place)
 
-		trip_plan_object = TripPlanning.objects.get(pk=pk)
+
+		# replace this with serializer
+
+		if "star_trip" in request.GET and request.user.is_superuser == False:
+			print("comes here")
+			trip_plan_object = TripPlanning.objects.get(pk=pk)
+		else:
+			trip_plan_object = TripPlanning.objects.get(pk=pk)
+			if request.user != trip_plan_object.user:
+				return HttpResponse("You are not authenticated to visit this page")
 		trip_details = trip_plan_object.trip_details
 		total_days = len(trip_details)
 		important_things_for_trip = trip_plan_object.important_things_for_trip
@@ -190,11 +300,12 @@ def EditTrip(request):
 			"start_budget":start_budget,
 			"end_budget":end_budget,
 			"final_file_list" : final_file_list,
-			
 			})
 	except Exception as e:
 		raise_exception("Error in EditTrip")
 		return HttpResponse("We are facing some maintainance activity")
+
+
 
 
 
@@ -350,15 +461,19 @@ def SignUpUser(request):
 			
 		else:
 			User.objects.create(first_name=full_name,email=email_address,password=password,username=email_address)
-			response['status_code'] = 200
+			response['status_code'] = "200"
 			response['status_message'] = "Success"
+			print("User is authenticated")
+			user = authenticate(request,username=email_address,password=password)
+			login(request, user,
+                      backend='django.contrib.auth.backends.ModelBackend')
 			
 
 
 	except Exception as e:
 		raise str(e)
 		raise_exception("Error in SignUpUser")
-		response = {"status_code":"500", "pk" : trip_pk}
+		response = {"status_code":"500"}
 	return Response(data=response)
 
 
@@ -366,10 +481,17 @@ def SignUpUser(request):
 def LoginAPI(request):
 	try:
 		data = request.data
+		print(data)
 		response = {}
 		email_address = data["email_address"]
+		print(email_address)
 		password = data["password"]
+		print(password)
 		user = authenticate(request,username=email_address,password=password)
+		print(user)
+		if user == None:
+			response = {"status_code":"500"}
+			return Response(data=response)
 		login(request, user,
                       backend='django.contrib.auth.backends.ModelBackend')
 		response['status_code'] = "200"
@@ -378,9 +500,22 @@ def LoginAPI(request):
 	except Exception as e:
 		raise str(e)
 		raise_exception("Error in SignUpUser")
-		response = {"status_code":"500", "pk" : trip_pk}
+		response = {"status_code":"500"}
 	return Response(data=response)
 	
+@api_view(('GET',))
+def Logout(request):
+	try:
+		logout(request)
+		response = {}
+		response['status_code'] = "200"
+		response['status_message'] = "Success"
+	except Exception as e:
+		raise str(e)
+		print(e)
+		raise_exception("Error in Logout user")
+		response = {"status_code":"500"}
+	return Response(data=response)
 
 
 	

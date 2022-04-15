@@ -1,97 +1,4 @@
-<!-- {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-</style>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css">
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="{% static 'ViageApp/css/home.css' %}">
-<script src="{% static 'ViageApp/js/home.js' %}"></script>
-<script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
-
-</head>
-
-
-  
-<body>
-{% include 'ViageApp/common/header.html' %}
-
-<div class="container-header">  
-  <div></div>  
-  <div class="text-center"><h1 class="font-weight-bold">Plan a new trip</h1></div>  
-  <div></div>
-</div>
-
-<div class="container-inputs">  
-  <div></div>  
-  <div>
-    <input type="text" id="dynamic-placeholder" list="places" />
-    <datalist id="places">
-
-    {% for items in place_images %}
-      <option value="{{items.place}}">
-    {% endfor %}
-  </datalist>
-  </div>  
-  
-  <div></div>
-  <div></div>  
-  
-  <div> 
-      <div class="container-date-headers">
-        <div></div>
-        <label for="startDate" style="padding-left: 20px;">Start Date</label>
-        <label for="endDate" style="padding-left: 20px;">End Date</label>
-      </div>      
-
-      <div class="container-date-headers">
-        <div></div>
-         <input id="startDate" name="startDate" type="text" />        
-        <input id="endDate" name="endDate" type="text" />
-      </div>      
-  </div>
- 
-</div>
-
-  <div  class="container-buttons">
-    <div></div>
-    <div>
-    <button type="submit" tabindex="0" class="btn" color="brand" onclick="submit_trip_details()">
-      Start planning</button>
-</div>
-      <div></div>
-  </div>
-
-
-
-  <div></div>
-</div>
-
-{% include 'ViageApp/common/footer.html' %}
-
-</body>
-
-</html> -->
-
-
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -110,6 +17,7 @@ body {
     <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
     <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
 
+
 </head>
 <body>  
     <section class = "start_background_trip" style="background-image: url('/static/ViageApp/assets/images/places/{{image_corresponding_to_place}}')  !important;">
@@ -119,31 +27,23 @@ body {
              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
-              <a class="navbar-brand logo_size  mx-auto px-2 href="#" style="font-size: 30px;">Viaje</a>
+              <a class="navbar-brand logo_size  mx-auto px-2 href="#" style="font-size: 30px;"></a>
               <a class="navbar-brand logo_size hide_user  me-0 px-2 href="#">
                <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                </svg>  
               </a>
-              <div class="collapse navbar-collapse" id="navbarsExample03">
+              <div class="collapse navbar-collapse" id="navbarsExample03" style="display: none !important;">
                  <ul class="navbar-nav ms-auto mb-2 mb-sm-0 mx-auto">
                     <li class="nav-item navbar_items" >
-                       <a class="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <li class="nav-item dropdown navbar_items" >
-                       <a class="nav-link active dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdown03">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                       </ul>
+                       <a class="nav-link active" aria-current="page" href="#personalised"></a>
                     </li>
                     <li class="nav-item navbar_items">
-                       <a class="nav-link active" href="#">Pricing</a>
+                       <a class="nav-link active" href="#request"></a>
                     </li>
                     <li class="nav-item navbar_items" class = "nav_items">
-                       <a class="nav-link active">Contact</a>
+                       <a class="nav-link active" href="#contact"></a>
                     </li>
                  </ul>
               </div>
@@ -165,8 +65,8 @@ body {
       
      <div class="container-fluid md-8" style="height: 700px;">
         <div class="top_content px-5 py-5 ">
-          <p class = " company_tagline pt-5 pb-3">Paris.<br> The City of Lights.</p>
-          <p class = "company_description pt-0 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p class = " company_tagline pt-5 pb-3">{{place_obj.place}}<br>{{place_obj.one_liner_explainer}}</p>
+          <p class = "company_description pt-0 pb-4">{{place_obj.place_definition}}</p>
           <button type="button" onclick="create_itinerary()" class="btn-lg pt-2 mb-5  itinerary_primary text-light">Create Itinerary</button>
           
           
@@ -174,59 +74,40 @@ body {
       </div>
     </section>
 
-    <!-- Personalised Itineraries -->
-    <section>
-      <div class="container-fluid md-8 mt-5 fourth_con">
-        <div class="container px-5 py-5 mx-auto mt-5 pb-0">
-          <p class = "popular_locations">Take a look at some of the itineraries, personalised just for you.</p>
-          <hr class = "line_divide" size="10px">
-        </div> 
-        <div class="container px-5 py-5 mx-auto overflow-auto">
-          <!-- Cards -->
-          <div class="row flex-row flex-nowrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/dubai.jpeg' %}" class="card-img-top img_control" alt="Dubai, UAE">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Dubai, UAE</h5>
-                  <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
+    <!-- Expert Itineraries -->
+      {% if request.user.is_authenticated %}
+      <section id="personalised">
+        <div class="container-fluid md-8 mt-5 fourth_con">
+          <div class="container px-5 py-5 mx-auto mt-5 pb-0">
+            <p class = "popular_locations">Take a look at some of the itineraries, personalised just for you.</p>
+            <hr class = "line_divide" size="10px">
+          </div> 
+          <div class="container px-5 py-5 mx-auto overflow-auto">
+            <!-- Cards -->
+            <div class="row flex-row flex-nowrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+              {% for items in special_itinerary %}
+
+              <div class="col my-5" onclick="window.location='/edit_trip/?pk={{items.pk}}&place_to_visit={{items.name}}&start_date={{items.start_date}}&end_date={{items.end_date}}&star_trip=true';">
+                <div class="card  card_design">
+                  <img src="/static/ViageApp/assets/images/places/{{items.image_corresponding_to_place}}" class="card-img-top img_control" alt="Dubai, UAE">
+                  <div class="card-body">
+                    <h5 class="card-title card_title_content">{{items.name}}</h5>
+                    <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs {{items.start_budget}} to {{items.end_budget}}</h6>
+                    
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/ladakh.jpeg' %}" class="card-img-top img_control" alt="Ladakh, India">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Ladakh, India</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                </div>
+
+              {% endfor %}
               </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/toronto.jpeg' %}" class="card-img-top img_control" alt="Toronto, Canada">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Toronto, Canada</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>                
-                </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/bali.jpeg' %}" class="card-img-top img_control" alt="Bali, Indonesia">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Bali, Indonesia</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
-        </div>
-        </div>
-    </section>
+          </div>
+      </section>
+      {% endif %}
 
-    <!-- Fun fact -->
+    <!-- Fun fact
     <section>
         <div class="container-fluid trip_con">
 
@@ -234,37 +115,37 @@ body {
               <div class="row">
                 
               <div class="col-sm-12 col-md-8 col-lg-9">
-                <p class = "popular_locations ">"The Eiffel Tower is not the most visited monument in Paris"</p>
+                <p class = "popular_locations ">{{place_obj.place_fact}}</p>
                 <hr class = "line_divide" size="10px">
-                <p class = "content_country mt-4 ">Contrary to popular belief, the Eiffel Tower is actually not the most visited monument in Paris! The Eiffel Tower is ranked fourth among the most prized monuments in Paris. The cathedral Notre-Dame ranks first, followed by the Sacré-Coeur Basilica and the Louvre Museum. Be sure to visit them all when in Paris!</p>
+                <p class = "content_country mt-4 ">{{place_obj.place_description}}</p>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-3 mx-auto">
                 <img src="{% static 'ViageApp/assets/images/complete_static/notre.jpeg' %}" class=" fact_image mx-auto mb-5 pb-5 img-fluid" alt="">
               </div>
               </div> 
-    </section>
+    </section> -->
 
     <!-- Option for Create and request itineraries -->
-    <section>
+    <section id="request">
         <div class="container-fluid md-8 my-5  fifth_con">
           <div class="container px-5 py-3 mx-auto  pb-0"></div>
           <p class = "popular_locations_3 pt-5 mx-2">Couldn’t find what you were looking for?</p>
           <hr class = "line_divide_new" size="10px">
-          <p class="container_information_2 pt-4 mb-0  mx-4">
-            Contrary to popular belief, the Eiffel Tower is actually not the most visited monument in Paris! The Eiffel Tower is ranked fourth among the most prized monuments in Paris.          </p>
+         <!--  <p class="container_information_2 pt-4 mb-0  mx-4">
+            Contrary to popular belief, the Eiffel Tower is actually not the most visited monument in Paris! The Eiffel Tower is ranked fourth among the most prized monuments in Paris.          </p> -->
             <div class="row row-cols-sm-1 align-items-center px-5 py-5">
                 <div class="col-sm-12 col-md-6 px-2 column1 mx-auto" style="width: 36rem;">
                     <img src="{% static 'ViageApp/assets/images/complete_static/create.png' %}" class="create_vector" style="width: 70%;"  alt="">
-                    <p class="create_itinerary">Contrary to popular belief, the Eiffel Tower is actually not the most visited monument in Paris! The Eiffel Tower is ranked fourth among the most 
+                    <p class="create_itinerary">{{place_obj.create_itinerary_fact}} 
                     </p>
-                    <button type="button" class="btn btn-primary py-2 mb-5 itinerary_primary">Create Itinerary</button>
+                    <button type="button" class="btn btn-primary py-2 mb-5 itinerary_primary" onclick="create_itinerary()">Create Itinerary</button>
                     
                 </div>
                 <div class="col-sm-12 col-md-6 px-2 column1 mx-auto" style="width: 36rem;">
                     <img src="{% static 'ViageApp/assets/images/complete_static/request.png' %}" class="request_vector" style="width: 70%;"  alt="">
-                    <p class="create_itinerary">Contrary to popular belief, the Eiffel Tower is actually not the most visited monument in Paris! The Eiffel Tower is ranked fourth among the most 
+                    <p class="create_itinerary">{{place_obj.request_itinerary_fact}}
                     </p>
-                    <button type="button" class="btn btn-primary py-2 mb-5 mx-auto itinerary_primary">Request Itinerary</button>
+                    <button type="button" class="btn btn-primary py-2 mb-5 mx-auto itinerary_primary" onclick="request_itinerary()">Request Itinerary</button>
 
                 </div>
             </div>  
@@ -278,48 +159,23 @@ body {
     <section>
       <div class="container-fluid md-8 mt-5 fourth_con">
         <div class="container px-5 py-5 mx-auto mt-5 pb-0">
-          <p class = "popular_locations">Not Paris? Here are a few places people visiting Paris also went to</p>
+          <p class = "popular_locations">Not {{place_obj.place}}? Here are a few places people visiting {{place_obj.place}} also went to</p>
           <hr class = "line_divide" size="10px">
         </div> 
         <div class="container px-5 py-5 mx-auto overflow-auto">
           <!-- Cards -->
           <div class="row flex-row flex-nowrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/dubai.jpeg' %}" class="card-img-top img_control" alt="Dubai, UAE">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Dubai, UAE</h5>
-                  <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
+            {% for items in blank_months %}
+                <div class="col my-5">
+                <div class="card  card_design">
+                <img src="/static/ViageApp/assets/images/places/{{items.image_corresponding_to_place}}" class="card-img-top img_control" alt="Dubai, UAE">
+                  <div class="card-body">
+                    <h5 class="card-title card_title_content">{{ items.name }}</h5>
+                    <!-- <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6> -->
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/ladakh.jpeg' %}" class="card-img-top img_control" alt="Ladakh, India">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Ladakh, India</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/toronto.jpeg' %}" class="card-img-top img_control" alt="Toronto, Canada">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Toronto, Canada</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>                
-                </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/bali.jpeg' %}" class="card-img-top img_control" alt="Bali, Indonesia">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Bali, Indonesia</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                </div>
-              </div>
-            </div>
+              </div>  
+            {% endfor %}
             </div>
           </div>
         </div>
@@ -370,7 +226,7 @@ body {
     </section>
   
     <!-- footer -->
-    <section>
+    <section id="contact">
             <hr class = "mb-5 mx-5 line_divide_9" size="1px">
             <footer class="row  py-2 mt-3 mx-5 bg-white text-dark">
               <div class="col-md-6 col-sm-12  ps-0 pe-3">
@@ -440,6 +296,7 @@ body {
   
             </footer>
     </section>
+    
 
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

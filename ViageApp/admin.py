@@ -5,7 +5,7 @@ from ViageApp.models import *
 
 class PlaceImagesAdmin(admin.ModelAdmin):
     list_filter = ('place',)
-    list_display = ('place', 'images')
+    list_display = ('place', 'images', 'start_month', 'end_month','all_months')
 
 admin.site.register(Config)
 admin.site.register(TripPlanning)

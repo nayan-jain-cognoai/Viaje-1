@@ -8,6 +8,8 @@ from django_currentuser.db.models import CurrentUserField
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
 from ViageApp.constants import *
+from multiselectfield import MultiSelectField
+
 
 
 # Create your models here.
@@ -73,7 +75,7 @@ class TripItinerary(models.Model):
 		verbose_name_plural = 'TripItinerary'
 
 class TripPlanning(models.Model):
-	date = models.DateField(default=timezone.now,blank=False)
+	created_date = models.DateField(default=timezone.now,blank=False)
 	trip_details = models.JSONField(default={})
 	flights = models.TextField(default="[]")
 	accomodation = models.TextField(default="[]")
@@ -85,9 +87,16 @@ class TripPlanning(models.Model):
 	important_things_for_trip = models.TextField(default="",blank=True,null=True)
 	start_budget = models.IntegerField(default=0,blank=True,null=True)
 	end_budget = models.IntegerField(default=0,blank=True,null=True)
+	star_itinerary = models.BooleanField(default=False, db_index=True)
+	place = models.ForeignKey('PlaceImages',default=True, null=True, on_delete=models.CASCADE)
+	start_date = models.DateField(default=timezone.now,blank=True)
+	end_date = models.DateField(default=timezone.now,blank=True)
 
 	def save(self, *args, **kwargs):
 		super(TripPlanning, self).save(*args, **kwargs)
+
+	def __str__(self):
+		return str(self.place.place)
 
 	class Meta:
 		verbose_name = 'TripPlanning'
@@ -96,10 +105,35 @@ class TripPlanning(models.Model):
 class PlaceImages(models.Model):
 	place = models.TextField(default="")
 	images = models.TextField(default="")
+	start_month =  models.CharField(max_length=256,
+							null=False,
+							blank=False,
+							choices=MONTHS,
+							help_text='The month people start visiting it',
+							)
+	end_month = models.CharField(max_length=256,
+							null=False,
+							blank=False,
+							choices=MONTHS,
+							help_text='The month people stop visiting it',
+							)
 
+	all_months = MultiSelectField(choices=MONTHS,
+                                 max_choices=12,
+                                 max_length=120)
+	one_liner_explainer = models.TextField(default="")
+	place_definition = models.TextField(default="")
+	place_fact = models.TextField(default="")
+	place_description = models.TextField(default="")
+	create_itinerary_fact = models.TextField(default="")
+	request_itinerary_fact = models.TextField(default="")
+	
 
 	def save(self,*args,**kwargs):
 		super(PlaceImages,self).save(*args, **kwargs)
+
+	def __unicode__(self):
+		return unicode(self.month)
 
 	class Meta:
 		verbose_name = 'PlaceImages'

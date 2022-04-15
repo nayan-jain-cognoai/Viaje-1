@@ -68,6 +68,11 @@ function day_trip_api_call(day_trip, start_date, end_date, user_pk, important_th
         pk = ""
     }
 
+    let star_trip = url_parameters["star_trip"]
+    if (typeof pk === "undefined") {
+        pk = ""
+    }
+
     let options = {
         method: 'POST',
         headers: {
@@ -80,7 +85,11 @@ function day_trip_api_call(day_trip, start_date, end_date, user_pk, important_th
             "user_pk": user_pk,
             "important_things_for_trip": important_things_for_trip,
             "start_budget":start_budget,
-            "end_budget":end_budget
+            "end_budget":end_budget,
+            "place_to_visit":place_to_visit,
+            "start_date":start_date,
+            "end_date":end_date,
+            "star_trip":star_trip
         })
     }
 
