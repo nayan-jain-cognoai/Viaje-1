@@ -39,7 +39,7 @@
 
     </head>
 
-    <body id="body-content">
+    <body id="body-content" style="margin: 0;padding: 0;" class="body">
         <div id="main">
             {% include 'ViageApp/trip_plan/tripplan_top.html' %}
             <!-- Start of complete div -->
@@ -157,7 +157,9 @@
     <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
     <script src="{% static 'ViageApp/js/home.js' %}"></script>
 
+    <script src="{% static 'ViageApp/js/common_utils.js' %}"></script>
     <script src="{% static 'ViageApp/js/bootstrap.js' %}"></script>
+    
     <script type="text/javascript">
       window.onload = function(){
         duplicate_day();

@@ -6,9 +6,7 @@ let files_flight = []
 var uploaded = {};
 var uploadIdFilenames = {}; 
 var uploaded_error = {};
-
 var type_of_attachment = ""
-
 
 let server = {
             url: 'http://127.0.0.1:8000/fp',

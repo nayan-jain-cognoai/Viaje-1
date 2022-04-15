@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ViageApp.apps.ViageappConfig',
     'django_drf_filepond',
-
+    'multiselectfield'
 ]
 
 MIDDLEWARE = [

@@ -52,7 +52,7 @@
         <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-get-file@1.0.7/dist/filepond-plugin-get-file.min.css">
     </head>
-    <body id="body-content">
+    <body id="body-content" style="margin: 0;padding: 0;" class="body">
         <div id="main">
             {% include 'ViageApp/trip_plan/tripplan_top.html' %}
             <!-- Start of complete div -->
@@ -260,12 +260,17 @@
     <!-- <script src ="{% static 'ViageApp/js/filepond_upload_js.js' %}" ></script> -->
     <script src="{% static 'ViageApp/js/trip_plan.js' %}"></script>
     <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
+    <script src="{% static 'ViageApp/js/common_utils.js' %}"></script>
     <script src="{% static 'ViageApp/js/bootstrap.js' %}"></script>
+    
+    
     <script type="text/javascript">
 
         window.start_date = "{{start_date}}";
         window.end_date = "{{end_date}}";
         window.day = {{total_days}};
+        var dates_between = getDatesBetweenDates(new Date("{{start_date}}"),new Date("{{end_date}}"));
+        window.dates_between = dates_between;
         let important_things_for_trip = {{important_things_for_trip | safe}}
         console.log(important_things_for_trip)
         let editor = new EditorJS({

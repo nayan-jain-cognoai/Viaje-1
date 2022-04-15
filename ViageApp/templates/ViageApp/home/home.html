@@ -25,7 +25,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
     <script src="{% static 'ViageApp/js/home.js' %}"></script>
     <script src="{% static 'ViageApp/js/data_pass_click.js' %}"></script>
+    <script src="{% static 'ViageApp/js/common_utils.js' %}"></script>
      <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
 
 
     </head>
@@ -47,7 +49,7 @@
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>  
                </a>
-               <div class="collapse navbar-collapse" id="navbarsExample03">
+               <div class="collapse navbar-collapse" id="navbarsExample03" style="display: none;">
                   <ul class="navbar-nav ms-auto mb-2 mb-sm-0 mx-auto">
                      <li class="nav-item navbar_items" >
                         <a class="nav-link active" aria-current="page" href="#about">About</a>
@@ -67,9 +69,15 @@
                     </svg>  
                    </a>
                    <ul class="dropdown-menu  dropdown-menu-end dropdown-menu-dark me-3 mt-0" aria-labelledby="dropdown03">
-                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-target="#loginmodal">Login</a></li>
-                    
-                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-target="#registermodal">Register</a></li>
+                    {% if request.user.is_authenticated %}
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-target="#logoutmodal" onclick="logout()">Logout</a></li>
+
+                    {% else %}
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-target="#loginmodal">Login</a></li>
+                      
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-target="#registermodal">Register</a></li>
+
+                    {% endif %}
                     
                  </ul>
                </div>
@@ -304,42 +312,18 @@
         <div class="container px-5 py-5 mx-auto overflow-auto">
           <!-- Cards -->
           <div class="row flex-row flex-nowrap  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" >
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/dubai.jpeg' %}" class="card-img-top img_control" alt="Dubai, UAE">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Dubai, UAE</h5>
-                  <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
+            
+            {% for items in blank_months %}
+                <div class="col my-5">
+                <div class="card  card_design">
+                <img src="/static/ViageApp/assets/images/places/{{items.image_corresponding_to_place}}" class="card-img-top img_control" alt="Dubai, UAE">
+                  <div class="card-body">
+                    <h5 class="card-title card_title_content">{{ items.name }}</h5>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/ladakh.jpeg' %}" class="card-img-top img_control" alt="Ladakh, India">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Ladakh, India</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/toronto.jpeg' %}" class="card-img-top img_control" alt="Toronto, Canada">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Toronto, Canada</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>                
-                </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <div class="card  card_design">
-                <img src="{% static 'ViageApp/assets/images/complete_static/bali.jpeg' %}" class="card-img-top img_control" alt="Bali, Indonesia">
-                <div class="card-body">
-                  <h5 class="card-title card_title_content">Bali, Indonesia</h5>
-                  <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                </div>
-              </div>
-            </div>
+              </div>  
+            {% endfor %}
+
             </div>
           </div>
         </div>
@@ -366,12 +350,6 @@
 
             {% endfor %}
         
-
-
-
-
-
-
           <!-- <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
             <div class="container mx-auto">
               <img src="{% static 'ViageApp/assets/images/complete_static/travelvector.jpg' %}" class="mx-4 mx-auto my-4 img-fluid img_vector" alt="">
@@ -421,47 +399,58 @@
           <div class="container px-5 py-5 mx-auto overflow-auto">
             <!-- Cards -->
             <div class="row flex-row flex-nowrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-              <div class="col my-5">
+
+              {% for items in special_itinerary %}
+
+              <div class="col my-5" onclick="window.location='/edit_trip/?pk={{items.pk}}&place_to_visit={{items.name}}&start_date={{items.start_date}}&end_date={{items.end_date}}&star_trip=true';">
                 <div class="card  card_design">
-                  <img src="{% static 'ViageApp/assets/images/complete_static/dubai.jpeg' %}" class="card-img-top img_control" alt="Dubai, UAE">
+                  <img src="/static/ViageApp/assets/images/places/{{items.image_corresponding_to_place}}" class="card-img-top img_control" alt="Dubai, UAE">
                   <div class="card-body">
-                    <h5 class="card-title card_title_content">Dubai, UAE</h5>
-                    <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
+                    <h5 class="card-title card_title_content">{{items.name}}</h5>
+                    <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs {{items.start_budget}} to {{items.end_budget}}</h6>
                   </div>
                 </div>
               </div>
-              <div class="col my-5">
-                <div class="card  card_design">
-                  <img src="{% static 'ViageApp/assets/images/complete_static/ladakh.jpeg' %}" class="card-img-top img_control" alt="Ladakh, India">
-                  <div class="card-body">
-                    <h5 class="card-title card_title_content">Ladakh, India</h5>
-                    <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col my-5">
-                <div class="card  card_design">
-                  <img src="{% static 'ViageApp/assets/images/complete_static/toronto.jpeg' %}" class="card-img-top img_control" alt="Toronto, Canada">
-                  <div class="card-body">
-                    <h5 class="card-title card_title_content">Toronto, Canada</h5>
-                    <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>                
-                  </div>
-                </div>
-              </div>
-              <div class="col my-5">
-                <div class="card  card_design">
-                  <img src="{% static 'ViageApp/assets/images/complete_static/bali.jpeg' %}" class="card-img-top img_control" alt="Bali, Indonesia">
-                  <div class="card-body">
-                    <h5 class="card-title card_title_content">Bali, Indonesia</h5>
-                    <h6 class="card-subtitle my-2 card_subtitle_content text-muted">Rs 1 Lakh to 3 Lakh</h6>
-                  </div>
-                </div>
-              </div>
+
+              {% endfor %}
               </div>
             </div>
           </div>
           </div>
       </section>
+
+      <!-- Expert Itineraries -->
+      {% if request.user.is_authenticated %}
+      <section>
+        <div class="container-fluid md-8 mt-5 fourth_con">
+          <div class="container px-5 py-5 mx-auto mt-5 pb-0">
+            <p class = "popular_locations">Your itineraries</p>
+            <hr class = "line_divide" size="10px">
+          </div> 
+          <div class="container px-5 py-5 mx-auto overflow-auto">
+            <!-- Cards -->
+            <div class="row flex-row flex-nowrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+              {% for items in your_itinerary %}
+
+              <div class="col my-5" onclick="window.location='/edit_trip/?pk={{items.pk}}&place_to_visit={{items.name}}&start_date={{items.start_date}}&end_date={{items.end_date}}&star_trip=true';">
+                <div class="card  card_design">
+                  <img src="/static/ViageApp/assets/images/places/{{items.image_corresponding_to_place}}" class="card-img-top img_control" alt="Dubai, UAE">
+                  <div class="card-body">
+                    <h5 class="card-title card_title_content">{{items.name}}</h5>
+                    <h6 class="card-subtitle my-2  card_subtitle_content text-muted">Rs {{items.start_budget}} to {{items.end_budget}}</h6>
+                    <h6 class="card-subtitle my-2  card_subtitle_content text-muted">{{items.start_date}} to {{items.end_date}}</h6>
+                  </div>
+                </div>
+              </div>
+
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+      {% endif %}
   
       <!-- Customer Testimonials -->
       <section>
@@ -892,6 +881,18 @@
 
           </footer>
       </section>
+
+      <div class="toast" id="login-success">
+        <div class="toast-body">
+          Successfull Logged In.
+        </div>
+      </div>
+
+      <div class="toast" id="login-failure">
+        <div class="toast-body">
+          Incorrect Credentials
+        </div>
+      </div>
          
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
