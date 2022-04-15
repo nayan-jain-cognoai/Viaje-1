@@ -1,6 +1,6 @@
  window.onload = function() {
       var sp = new SuperPlaceholder({
-        placeholders: ["Manali", "Goa"],
+        placeholders: ["Paris", "Shillong"],
         preText: "Where to? ",
         stay: 1000,
         speed: 100,
@@ -88,21 +88,22 @@
 
 $(function () {
     var sd = new Date(), ed = new Date();
-  
-    $('#startDate').datetimepicker({ 
+    try{
+      $('#startDate').datetimepicker({ 
       pickTime: false, 
       format: "YYYY/MM/DD", 
       defaultDate: sd, 
+      //maxDate: ed 
     });
   
     $('#endDate').datetimepicker({ 
       pickTime: false, 
       format: "YYYY/MM/DD", 
       defaultDate: ed, 
+      minDate: sd 
     });
-
-    //passing 1.jquery form object, 2.start date dom Id, 3.end date dom Id
-    //bindDateRangeValidation($("#form"), 'startDate', 'endDate');
+    }catch(err){}
+    bindDateRangeValidation($("#form"), 'startDate', 'endDate');
 });
 
 
@@ -164,3 +165,6 @@ $(function () {
     clearInterval(this.intervalId); 
   }
 }
+
+
+
