@@ -1980,3 +1980,25 @@ File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- I
 File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
 File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
 File: /Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+Error [column ViageApp_placeimages.start_month does not exist
+LINE 1: ...images"."place", "ViageApp_placeimages"."images", "ViageApp_...
+                                                             ^
+] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [113] :-Message [HomePage has an error]
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+Error [column ViageApp_placeimages.start_month does not exist
+LINE 1: ...images"."place", "ViageApp_placeimages"."images", "ViageApp_...
+                                                             ^
+] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [113] :-Message [HomePage has an error]
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+Error [column ViageApp_placeimages.start_month does not exist
+LINE 1: ...images"."place", "ViageApp_placeimages"."images", "ViageApp_...
+                                                             ^
+] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [113] :-Message [HomePage has an error]
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 119 :- Inside Home Page
+Error [list index out of range] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [162] :-Message [HomePage has an error]
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page
+File: /home/ubuntu/Viage/ViageApp/views.py: at Line 57 :- Inside Index Page

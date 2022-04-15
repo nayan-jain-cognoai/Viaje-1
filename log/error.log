@@ -2,3 +2,16 @@ Error [unconverted data remains: #contact] File: [/Users/nayanjain/Documents/Git
 Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
 Error [unconverted data remains: #] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in BookTrip]
 Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
+Error [column ViageApp_placeimages.start_month does not exist
+LINE 1: ...images"."place", "ViageApp_placeimages"."images", "ViageApp_...
+                                                             ^
+] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [113] :-Message [HomePage has an error]
+Error [column ViageApp_placeimages.start_month does not exist
+LINE 1: ...images"."place", "ViageApp_placeimages"."images", "ViageApp_...
+                                                             ^
+] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [113] :-Message [HomePage has an error]
+Error [column ViageApp_placeimages.start_month does not exist
+LINE 1: ...images"."place", "ViageApp_placeimages"."images", "ViageApp_...
+                                                             ^
+] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [113] :-Message [HomePage has an error]
+Error [list index out of range] File: [/home/ubuntu/Viage/ViageApp/views.py]: at Line [162] :-Message [HomePage has an error]

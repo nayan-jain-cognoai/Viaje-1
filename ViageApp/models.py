@@ -21,14 +21,14 @@ class User(AbstractUser):
 							choices=TYPE_OF_USER,
 							help_text='Role of a user where user can be "agent" or "customer".',
 							)
-
+	"""
 	def save(self, *args, **kwargs):
 		if self.pk == None:
 			self.set_password(self.password)
 		elif not self.password.startswith("pbkdf2_sha256"):
 			self.set_password(self.password)
 		super(User, self).save(*args, **kwargs)
-	
+	"""
 	class Meta:
 		verbose_name = "User"
 		verbose_name_plural = "Users"
