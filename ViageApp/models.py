@@ -140,5 +140,18 @@ class PlaceImages(models.Model):
 		verbose_name_plural = 'PlaceImages'
 
 
+class RequestItineraries(models.Model):
+	start_date = models.DateField(default=timezone.now,blank=True)
+	end_date = models.DateField(default=timezone.now,blank=True)
+	place = models.TextField(default="")
+	user = models.ForeignKey(
+        User, null=True, blank=True, on_delete=models.CASCADE)
+
+	def __unicode__(self):
+		return unicode(self.user.username)
+
+	class Meta:
+		verbose_name = 'RequestItineraries'
+		verbose_name_plural = 'RequestItineraries'
 
 

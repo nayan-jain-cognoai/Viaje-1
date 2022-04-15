@@ -15,7 +15,7 @@ from rest_framework.response import Response
 
 # imports from files
 from Viage.utils_common import *
-from ViageApp.models import Config,TripPlanning,PlaceImages,User
+from ViageApp.models import Config,TripPlanning,PlaceImages,User,RequestItineraries
 from rest_framework.decorators import api_view, renderer_classes
 from inspect import getframeinfo, stack
 from os import walk
@@ -117,6 +117,7 @@ def index(request):
 def HomePage(request):
 	try:
 		raise_info("Inside Home Page")
+		print(request.user)
 		place_images = PlaceImages.objects.all()
 		place_to_visit = request.GET["place_to_visit"]
 		start_date = request.GET["start_date"]
@@ -148,6 +149,12 @@ def HomePage(request):
 				})
 		print(special_itinerary)
 
+		try:
+			print(request.user.username)
+			user_pk = User.objects.get(username=request.user.username).pk
+		except:
+			user_pk = ""
+
 		
 		return render(request,'ViageApp/trip_plan/home.html',{
 			"place_to_visit":place_to_visit,
@@ -156,7 +163,8 @@ def HomePage(request):
 			"end_date":end_date,
 			"place_obj":place_obj,
 			"blank_months":blank_months,
-			"special_itinerary":special_itinerary
+			"special_itinerary":special_itinerary,
+			"user_pk":user_pk
 			})
 	except Exception as e:
 		raise_exception("HomePage has an error")
@@ -516,6 +524,32 @@ def Logout(request):
 		raise_exception("Error in Logout user")
 		response = {"status_code":"500"}
 	return Response(data=response)
+
+
+
+@api_view(('POST',))
+def RaiseRequest(request):
+	try:
+		raise_info("Inside Raise request")
+		data = request.data
+		
+		user_pk = data["user_pk"]
+		user = User.objects.get(pk=user_pk)
+		place_to_visit = unquote(data['place_to_visit'])
+		place_obj = PlaceImages.objects.filter(place=place_to_visit)[0]
+
+		start_date = unquote(data['start_date'])
+		start_date =  datetime.datetime.strptime(start_date, '%Y/%m/%d')
+		end_date = unquote(data['end_date'])
+		end_date = datetime.datetime.strptime(end_date, '%Y/%m/%d')
+
+		RequestItineraries.objects.create(start_date=start_date,end_date=end_date,place=place_to_visit,user=user)
+		response = {"status_code":"200"}
+		return Response(data=response)
+	except Exception as e:
+		raise_exception("Error in RaiseRequest")
+		response = {"status_code":"500"}
+		return Response(data=response)
 
 
 	

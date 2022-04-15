@@ -2,3 +2,8 @@ Error [unconverted data remains: #contact] File: [/Users/nayanjain/Documents/Git
 Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
 Error [unconverted data remains: #] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [254] :-Message [Error in BookTrip]
 Error [Field 'id' expected a number but got 'undefined'.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [305] :-Message [Error in EditTrip]
+Error [name 'RequestItineraries' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [541] :-Message [Error in RaiseRequest]
+Error [name 'RequestItineraries' is not defined] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [541] :-Message [Error in RaiseRequest]
+Error [Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10355ba30>": "RequestItineraries.user" must be a "User" instance.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [541] :-Message [Error in RaiseRequest]
+Error [Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x103549df0>": "RequestItineraries.user" must be a "User" instance.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [541] :-Message [Error in RaiseRequest]
+Error [Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10fe11280>": "RequestItineraries.user" must be a "User" instance.] File: [/Users/nayanjain/Documents/GitHub/Viage/ViageApp/views.py]: at Line [542] :-Message [Error in RaiseRequest]
