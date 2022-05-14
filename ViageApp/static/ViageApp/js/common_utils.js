@@ -28,7 +28,7 @@ function sign_up_user(){
             })
         }
 
-    let fetchRes = fetch("/signup/", options);
+    let fetchRes = fetch("/signin/", options);
     let response;
 
     fetchRes.then(res =>
@@ -37,10 +37,10 @@ function sign_up_user(){
             console.log(response)
             if(response["status_code"] == "200"){
             console.log("here")
-            alert("Succesfully Signed in, please login.")
-            // setTimeout(function(){
-            //   window.location.reload()
-            // },1000)
+            alert("Succesfully Signed in")
+            setTimeout(function(){
+               window.location.reload()
+             },500)
           }else{
             alert("System is facing some error")
           }

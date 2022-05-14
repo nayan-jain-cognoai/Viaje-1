@@ -471,15 +471,16 @@ def SignUpUser(request):
 			User.objects.create(first_name=full_name,email=email_address,password=password,username=email_address)
 			response['status_code'] = "200"
 			response['status_message'] = "Success"
-			print("User is authenticated")
 			user = authenticate(request,username=email_address,password=password)
-			login(request, user,
-                      backend='django.contrib.auth.backends.ModelBackend')
-			
-
+			login(request, user,backend='django.contrib.auth.backends.ModelBackend')
+			raise_exception(user)
+			raise_exception("Reached here")
+			raise_exception(response)
+			return Response(data=response)
+			raise_exception("Below")
 
 	except Exception as e:
-		raise str(e)
+		#raise str(e)
 		raise_exception("Error in SignUpUser")
 		response = {"status_code":"500"}
 	return Response(data=response)
